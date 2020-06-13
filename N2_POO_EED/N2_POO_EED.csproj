@@ -63,12 +63,38 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes ancestrais Animais\Animal.cs" />
+    <Compile Include="Classes ancestrais Animais\Ave.cs" />
+    <Compile Include="Classes ancestrais Animais\Mamifero.cs" />
+    <Compile Include="Classes ancestrais Animais\Reptil.cs" />
+    <Compile Include="Estruturas de dados\Arvore.cs" />
+    <Compile Include="Estruturas de dados\Lista.cs" />
+    <Compile Include="Estruturas de dados\NodoArvore.cs" />
+    <Compile Include="Estruturas de dados\NodoLista.cs" />
+    <Compile Include="Interfaces Animais\IAquatico.cs" />
+    <Compile Include="Interfaces Animais\IOviparo.cs" />
+    <Compile Include="Interfaces Animais\IPredador.cs" />
+    <Compile Include="Interfaces Animais\IVoar.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pasta Animais\Baleia.cs" />
+    <Compile Include="Pasta Animais\Cachorro.cs" />
+    <Compile Include="Pasta Animais\Cobra.cs" />
+    <Compile Include="Pasta Animais\Coruja.cs" />
+    <Compile Include="Pasta Animais\Gato.cs" />
+    <Compile Include="Pasta Animais\Gaviao.cs" />
+    <Compile Include="Pasta Animais\Leao.cs" />
+    <Compile Include="Pasta Animais\Morcego.cs" />
+    <Compile Include="Pasta Animais\Ornitorrinco.cs" />
+    <Compile Include="Pasta Animais\Pato.cs" />
+    <Compile Include="Pasta Animais\Pinguim.cs" />
+    <Compile Include="Pasta Animais\Pombo.cs" />
+    <Compile Include="Pasta Animais\Tartaruga.cs" />
+    <Compile Include="Pasta Animais\Tigre.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -94,5 +120,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
