@@ -55,10 +55,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="about.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="animalDetails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="animalList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="create.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="about.xaml.cs">
+      <DependentUpon>about.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="animalDetails.xaml.cs">
+      <DependentUpon>animalDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="animalList.xaml.cs">
+      <DependentUpon>animalList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -67,6 +92,9 @@
     <Compile Include="Classes ancestrais Animais\Ave.cs" />
     <Compile Include="Classes ancestrais Animais\Mamifero.cs" />
     <Compile Include="Classes ancestrais Animais\Reptil.cs" />
+    <Compile Include="create.xaml.cs">
+      <DependentUpon>create.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Estruturas de dados\Arvore.cs" />
     <Compile Include="Estruturas de dados\Lista.cs" />
     <Compile Include="Estruturas de dados\NodoArvore.cs" />
