@@ -148,6 +148,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="create.png" />
+    <Resource Include="select.png" />
+    <Resource Include="tittle.png" />
+    <Resource Include="Prancheta 2.png" />
+    <Content Include="Prancheta 2.svg" />
+    <Resource Include="tittle.jpg.jpg" />
+    <Resource Include="prancheta.jpg.png" />
+    <Resource Include="tittle.jpg" />
+    <Resource Include="Prancheta.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

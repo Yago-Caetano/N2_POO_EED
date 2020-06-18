@@ -5,8 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:N2_POO_EED"
         mc:Ignorable="d"
-        Title="create" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="create" Height="450" Width="573">
+    <Image HorizontalAlignment="Left" Height="422" Margin="0,0,-8,-3" VerticalAlignment="Top" Width="573" Source="prancheta.jpg.png"/>
 </Window>

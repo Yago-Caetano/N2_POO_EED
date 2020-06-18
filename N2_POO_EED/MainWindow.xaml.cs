@@ -24,5 +24,15 @@ namespace N2_POO_EED
         {
             InitializeComponent();
         }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            //aqui eu chamo a tela que cria
+        }
+
+        private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            //aqui eu chamo a tela que seleciona
+        }
     }
 }
