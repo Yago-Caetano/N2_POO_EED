@@ -151,5 +151,11 @@
   <ItemGroup>
     <Resource Include="tela listar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Prancheta 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="quadro.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

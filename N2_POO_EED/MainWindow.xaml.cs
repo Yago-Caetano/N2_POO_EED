@@ -27,6 +27,10 @@ namespace N2_POO_EED
             InitializeComponent();
         }
 
-
+        private void BtnList_Click(object sender, RoutedEventArgs e)
+        {
+            animalList Tela = new animalList();
+            Tela.Show();
+        }
     }
 }

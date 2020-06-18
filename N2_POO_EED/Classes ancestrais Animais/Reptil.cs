@@ -11,6 +11,11 @@ namespace N2_POO_EED.Classes_ancestrais_Animais
         protected bool escamas;
         protected bool casco;
 
+        public override string ToString()
+        {
+            return base.ToString() + $"Tem Escamas? {(escamas == true ? "Sim" : "Não")}" + Environment.NewLine + 
+                $"Tem Casco? {(casco == true ? "Sim" : "Não")}" + Environment.NewLine;
+        }
 
         public Reptil()
         {

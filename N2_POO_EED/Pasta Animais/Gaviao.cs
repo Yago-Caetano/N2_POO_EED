@@ -8,10 +8,16 @@ using System.Threading.Tasks;
 
 namespace N2_POO_EED.Pasta_Animais
 {
-    class Gaviao : Ave, IVoar,IPredador
+    class Gaviao : Ave, IVoar, IPredador
     {
         private int altitudeMaxima = 2000;
         private double velocidadeVoo = 320.0;
+
+        public override string ToString()
+        {
+            return "Tipo: Gavião" + Environment.NewLine + base.ToString() + $"Altitude Máxima: {altitudeMaxima}"
+        + Environment.NewLine + $"Velocidade De Voo: {velocidadeVoo}km/h" + Environment.NewLine;
+        }
 
         public Gaviao()
         {

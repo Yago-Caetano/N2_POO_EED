@@ -18,9 +18,9 @@ namespace N2_POO_EED.Pasta_Animais
         
         public override string ToString()
         {
-            return base.ToString() + "Tipo: Baleia" + Environment.NewLine + $"Vive Em Terra?: {(viveTerra == true ? "Sim" : "Não")}" + Environment.NewLine +
-                $"Mergulha?: {(mergulho == true ? "Sim" : "Não")}" + Environment.NewLine +
-                 $"Vive na água doce?: {(aguaDoce == true ? "Sim" : "Não")}" + Environment.NewLine;
+            return "Tipo: Baleia" + Environment.NewLine + base.ToString()  + $"Vive Em Terra? {(viveTerra == true ? "Sim" : "Não")}" + Environment.NewLine +
+                $"Mergulha? {(mergulho == true ? "Sim" : "Não")}" + Environment.NewLine +
+                 $"Vive na água doce? {(aguaDoce == true ? "Sim" : "Não")}" + Environment.NewLine;
         }
         public Baleia(string _nome, DateTime _data, char _sexo, int _qtMamas) : base(_nome, _data, _sexo, _qtMamas, null)
         {

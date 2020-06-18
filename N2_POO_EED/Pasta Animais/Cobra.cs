@@ -10,6 +10,10 @@ namespace N2_POO_EED.Pasta_Animais
 {
     class Cobra : Reptil, IPredador,IOviparo
     {
+        public override string ToString()
+        {
+            return "Tipo: Cobra" + Environment.NewLine + base.ToString();
+        }
         public Cobra(string _nome, DateTime _data, char _sexo) : base(_nome, _data, _sexo)
         {
             escamas = true;

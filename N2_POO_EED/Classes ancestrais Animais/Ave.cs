@@ -10,7 +10,12 @@ namespace N2_POO_EED.Classes_ancestrais_Animais
     {
         protected bool rapina;
         private string cor_pena;
-        
+
+        public override string ToString()
+        {
+            return base.ToString() + $"Rapina? {(rapina == true ? "Sim" : "Não")}" + Environment.NewLine + 
+                $"Cor das Penas: {cor_pena}" + Environment.NewLine;
+        }
         public bool Rapina
         {
             get { return rapina; }

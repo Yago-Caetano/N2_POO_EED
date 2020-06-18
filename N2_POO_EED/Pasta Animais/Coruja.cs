@@ -12,6 +12,12 @@ namespace N2_POO_EED.Pasta_Animais
     {
         private int altitudeMaxima = 1000;
         private double velocidadeVoo = 15.0;
+
+        public override string ToString()
+        {
+            return "Tipo: Coruja" + Environment.NewLine + base.ToString() + $"Altitude Máxima: {altitudeMaxima}"
+                + Environment.NewLine + $"Velocidade De Voo: {velocidadeVoo}km/h" + Environment.NewLine;
+        }
         public Coruja()
         {
             carnivoro = true;
