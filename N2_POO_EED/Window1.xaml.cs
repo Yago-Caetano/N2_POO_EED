@@ -10,29 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace N2_POO_EED
 {
     /// <summary>
-    /// Interação lógica para MainWindow.xam
+    /// Lógica interna para Window1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Window1 : Window
     {
-        public MainWindow()
+        public Window1()
         {
             InitializeComponent();
-        }
-
-        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            //aqui eu chamo a tela que cria
-        }
-
-        private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
-        {
-            //aqui eu chamo a tela que seleciona
         }
     }
 }
