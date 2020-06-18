@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="animalList" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="319*"/>
+        </Grid.RowDefinitions>
+        <ComboBox x:Name="cbListar" HorizontalAlignment="Left" Margin="22,84,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CbListar_SelectionChanged" Grid.RowSpan="2" BorderBrush="{x:Null}">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="{DynamicResource {x:Static SystemColors.MenuHighlightColorKey}}" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem Content="Todos&#xA;" HorizontalAlignment="Left" Width="118" Height="22"/>
+            <ComboBoxItem Content="ComboBoxItem" HorizontalAlignment="Left" Width="118"/>
+        </ComboBox>
+        <TextBox x:Name="txtListar" HorizontalAlignment="Left" Height="291" Margin="197,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="372" Grid.RowSpan="2" VerticalScrollBarVisibility="Visible"/>
+
     </Grid>
 </Window>

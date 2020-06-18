@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using N2_POO_EED.Estruturas_de_dados;
+using N2_POO_EED.Classes_ancestrais_Animais;
 
 namespace N2_POO_EED
 {
@@ -19,9 +21,30 @@ namespace N2_POO_EED
     /// </summary>
     public partial class animalList : Window
     {
+
         public animalList()
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            animalList TelaListar = new animalList();
+            TelaListar.Show();
+        }
+
+        private void CbListar_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Lista lista;
+
+             if (cbListar.SelectedIndex == 0)
+             {
+                 lista = Arvore.GetAllTiposAnimais(typeof(Animal));
+
+                
+                 txtListar.AppendText(lista.Listar());
+             }
+        }
+
     }
 }

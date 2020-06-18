@@ -8,25 +8,25 @@ using System.Threading.Tasks;
 namespace N2_POO_EED.Estruturas_de_dados
 
 {
-    class Arvore
+    static class Arvore
     {
-        private NodoArvore raiz = null; //Raiz arvore
-        private int qtdeNodosInternos = 0; // quantidade de nós internos
+        private static NodoArvore raiz = null; //Raiz arvore
+        private static int qtdeNodosInternos = 0; // quantidade de nós internos
 
 
-        public Arvore()
+        static Arvore()
         {
         }
         /// <summary>
         /// Devolve a quantidade de nodos internos
         /// </summary>
         /// <returns></returns>
-        public int QtdeNodosInternos()
+        static public int QtdeNodosInternos()
         {
             return qtdeNodosInternos;
         }
 
-        public NodoArvore GetRaiz() { return raiz; }
+        static public NodoArvore GetRaiz() { return raiz; }
 
         /// <summary>
         /// Pesquisa um nodo na árvore e devolve o nodo. Caso não encontre, devolve o nodo
@@ -35,7 +35,7 @@ namespace N2_POO_EED.Estruturas_de_dados
         /// <param name="valor"></param>
         /// <param name="no"></param>
         /// <returns></returns>
-        private NodoArvore PesquisaValor(string nome, NodoArvore no)
+        static public NodoArvore PesquisaValor(string nome, NodoArvore no)
         {
             if (no.EhExterno())
                 return no; // não encontrou
@@ -52,7 +52,7 @@ namespace N2_POO_EED.Estruturas_de_dados
         /// </summary>
         /// <param name="nome">nome do animal procurado</param>
         /// <returns></returns>
-        public Animal Pesquisar(string nome)
+        static public Animal Pesquisar(string nome)
         {
             NodoArvore no_aux = new NodoArvore();
             no_aux = PesquisaValor(nome, raiz);
@@ -60,7 +60,7 @@ namespace N2_POO_EED.Estruturas_de_dados
                 throw new Exception("Animal não encontrado!");
             else
                 return no_aux.GetValor();
-             
+
         }
         /// <summary>
         /// Percorre toda a arvore em sentido crescente a partir de um nodo, adicionada na lista especificada
@@ -70,23 +70,23 @@ namespace N2_POO_EED.Estruturas_de_dados
         /// <param name="no">Nodo que será analisado</param>
         /// <param name="list">Lista onde será armazenado os dados</param>
         /// <param name="tipo">typeof() da classe ou interface para procurar</param>
-        private void PercursoInterfixado(NodoArvore no, ref Lista list, Type tipo)
+        static public void PercursoInterfixado(NodoArvore no, ref Lista list, Type tipo)
         {
             if (no.EhExterno())
                 return;
-            PercursoInterfixado(no.GetNoEsquerda(), ref list, tipo);          
-            if (no.GetValor().GetType() == tipo || no.GetValor().GetType().IsSubclassOf(tipo) 
-                || no.GetValor().GetType().GetInterfaces().Contains(tipo)) 
+            PercursoInterfixado(no.GetNoEsquerda(), ref list, tipo);
+            if (no.GetValor().GetType() == tipo || no.GetValor().GetType().IsSubclassOf(tipo)
+                || no.GetValor().GetType().GetInterfaces().Contains(tipo))
                 list.InserirNoFim(no.GetValor());// Se for do mesmo tipo do objeto passado como parametro, ou herdar dele ou implementar ele
-            PercursoInterfixado(no.GetNoDireita(),ref list, tipo);
+            PercursoInterfixado(no.GetNoDireita(), ref list, tipo);
 
         }
-        private void PercursoInterfixadoIdade(NodoArvore no, ref Lista list)
+        static public void PercursoInterfixadoIdade(NodoArvore no, ref Lista list)
         {
             if (no.EhExterno())
                 return;
             PercursoInterfixadoIdade(no.GetNoEsquerda(), ref list);
-             list.AdicionarEmOrdem(no.GetValor());// Se for do mesmo tipo do objeto passado como parametro, ou herdar dele ou implementar ele
+            list.AdicionarEmOrdem(no.GetValor());// Se for do mesmo tipo do objeto passado como parametro, ou herdar dele ou implementar ele
             PercursoInterfixadoIdade(no.GetNoDireita(), ref list);
 
         }
@@ -96,7 +96,7 @@ namespace N2_POO_EED.Estruturas_de_dados
         /// </summary>
         /// <param name="animal">typeof() da classe ou interface que deseja procurar na arvore</param>
         /// <returns>Lista com todos os dados que tem o mesmo tipo do parametro animal, ou herdam dele ou implementam ele</returns>
-        public Lista GetAllTiposAnimais(Type animal)
+        static public Lista GetAllTiposAnimais(Type animal)
         {
             Lista lista = new Lista();
             PercursoInterfixado(raiz, ref lista, animal);
@@ -110,7 +110,7 @@ namespace N2_POO_EED.Estruturas_de_dados
         /// Retorna uma lista com todos os animais ordenados por idade de forma crescente
         /// </summary>
         /// <returns>lsita com os animais ordenados por idade </returns>
-        public Lista GetListaPorIdade()
+        static public Lista GetListaPorIdade()
         {
             Lista lista = new Lista();
             PercursoInterfixadoIdade(raiz, ref lista);
@@ -126,7 +126,7 @@ namespace N2_POO_EED.Estruturas_de_dados
         /// </summary>
         /// <param name="valor"></param>
         /// <returns> retorna falso se o valor já existir e verdadeiro se o valor for inserido com sucesso</returns>
-        public bool Insere(Animal valor) // insere um valor int
+        static public bool Insere(Animal valor) // insere um valor int
         {
             NodoArvore no_aux;
             if (qtdeNodosInternos == 0) // árvore vazia!
@@ -158,7 +158,7 @@ namespace N2_POO_EED.Estruturas_de_dados
         /// Remove um valor da árvore
         /// </summary>
         /// <param name="valor"></param>
-        public void Remove(string nome)
+        static public void Remove(string nome)
         {
             //primeiro, procuramos o nodo que tem o valor:
             NodoArvore noQueSeraApagado = PesquisaValor(nome, raiz);
@@ -183,7 +183,7 @@ namespace N2_POO_EED.Estruturas_de_dados
         /// Exclui um nodo que abaixo dele possua, ao menos, 1 nodo exteno.
         /// </summary>
         /// <param name="noQueSeraApagado"></param>
-        private void ExcluiComNodoExterno(NodoArvore noQueSeraApagado)
+        static public void ExcluiComNodoExterno(NodoArvore noQueSeraApagado)
         {
             qtdeNodosInternos--;
             //descobre quem será o nodo que irá ficar no lugar do que foi apagado
@@ -213,18 +213,18 @@ namespace N2_POO_EED.Estruturas_de_dados
         /// </summary>
         /// <param name="no"></param>
         /// <returns></returns>
-        private NodoArvore PesquisaNodoInternoInterfixado(NodoArvore no)
+        static public NodoArvore PesquisaNodoInternoInterfixado(NodoArvore no)
         {
             if (no.EhExterno())
                 return null;
             NodoArvore retorno = PesquisaNodoInternoInterfixado(no.GetNoEsquerda());
-            if (retorno == null) 
+            if (retorno == null)
                 return no;
             else
                 return retorno;
         }
 
-        private void ExcluiSemNodoExterno(NodoArvore noQueSeraApagado)
+        static public void ExcluiSemNodoExterno(NodoArvore noQueSeraApagado)
         {
             //encontra o nodo substituto
             NodoArvore NodoSubstituto = PesquisaNodoInternoInterfixado(noQueSeraApagado.GetNoDireita());

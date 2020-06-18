@@ -14,7 +14,11 @@ namespace N2_POO_EED.Classes_ancestrais_Animais
         private string cor_pelo;
 
 
-        
+        public override string ToString()
+        {
+            return base.ToString() + $"QtdeMamas: {qtMamas}" + Environment.NewLine + $"Cor do Pelo: {cor_pelo}" + Environment.NewLine +
+               $"Pelos: {(pelos == true ? "Sim" : "Não")}" + Environment.NewLine;
+        }
         public bool Pelos
         {
             get { return pelos; }
