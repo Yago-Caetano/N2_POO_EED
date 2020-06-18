@@ -196,7 +196,7 @@ namespace N2_POO_EED.Estruturas_de_dados
                 r = r + Environment.NewLine + aux.Dado.ToString();
                 aux = aux.Proximo;
             }
-            return r.Trim();
+            return  r.Trim();
         }
 
         public IEnumerator GetEnumerator()

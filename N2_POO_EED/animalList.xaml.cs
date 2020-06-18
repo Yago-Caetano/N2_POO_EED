@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using N2_POO_EED.Estruturas_de_dados;
 using N2_POO_EED.Classes_ancestrais_Animais;
+using N2_POO_EED.Pasta_Animais;
 
 namespace N2_POO_EED
 {
@@ -41,10 +42,21 @@ namespace N2_POO_EED
              {
                  lista = Arvore.GetAllTiposAnimais(typeof(Animal));
 
-                
-                 txtListar.AppendText(lista.Listar());
+
+                txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
              }
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Baleia ba = new Baleia();
+            ba.Cor_pelos = "Azul";
+            ba.Data_Nascimento = Convert.ToDateTime("23/03/2001");
+            ba.Nome = "Oliver";
+            ba.QtMamas = 5;
+            ba.Sexo = 'M';
+
+            Arvore.Insere(ba);
+        }
     }
 }

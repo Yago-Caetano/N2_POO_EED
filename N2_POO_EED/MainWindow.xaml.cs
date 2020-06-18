@@ -27,19 +27,6 @@ namespace N2_POO_EED
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Baleia ba = new Baleia();
-            ba.Cor_pelos = "Azul";
-            ba.Data_Nascimento =Convert.ToDateTime("23/03/2001");
-            ba.Nome = "Oliver";
-            ba.QtMamas = 5;
-            ba.Sexo = 'M';
 
-            Arvore.Insere(ba);
-
-            animalList TelaListar = new animalList();
-            TelaListar.Show();           
-        }
     }
 }

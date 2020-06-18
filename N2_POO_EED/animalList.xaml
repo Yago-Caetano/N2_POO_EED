@@ -22,6 +22,7 @@
             <ComboBoxItem Content="ComboBoxItem" HorizontalAlignment="Left" Width="118"/>
         </ComboBox>
         <TextBox x:Name="txtListar" HorizontalAlignment="Left" Height="291" Margin="197,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="372" Grid.RowSpan="2" VerticalScrollBarVisibility="Visible"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="636,103,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
 
     </Grid>
 </Window>
