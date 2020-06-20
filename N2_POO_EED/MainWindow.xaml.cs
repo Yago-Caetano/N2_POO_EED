@@ -24,5 +24,11 @@ namespace N2_POO_EED
         {
             InitializeComponent();
         }
+
+        private void Btn_telaCadastro_Click(object sender, RoutedEventArgs e)
+        {
+            create telaCadastro = new create();
+            telaCadastro.Show();
+        }
     }
 }
