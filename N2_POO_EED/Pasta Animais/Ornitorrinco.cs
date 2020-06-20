@@ -15,6 +15,13 @@ namespace N2_POO_EED.Pasta_Animais
         private bool mergulho = true;
         private bool aguaDoce = true;
 
+        public override string ToString()
+        {
+            return "Tipo: Ornitorrinco" + Environment.NewLine + base.ToString() + $"Vive Em Terra? Sim" + Environment.NewLine +
+                $"Mergulha? Sim" + Environment.NewLine +
+                 $"Vive na água doce? Sim" + Environment.NewLine;
+        }
+
         public Ornitorrinco(string _nome, DateTime _data, char _sexo, int _qtMamas, string cor)
         {
             Nome = _nome;

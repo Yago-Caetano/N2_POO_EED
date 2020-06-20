@@ -11,6 +11,12 @@ namespace N2_POO_EED.Animais
 {
     class Morcego : Mamifero, IVoar, IPredador
     {
+        public override string ToString()
+        {
+            return "Tipo: Morcego" + Environment.NewLine + base.ToString() + $"Altitude Máxima: {altitudeMaxima}"
+                + Environment.NewLine + $"Velocidade De Voo: {velocidadeVoo}km/h" + Environment.NewLine;
+        }
+
         public Morcego(string _nome, DateTime _data, char _sexo, int _qtMamas, string cor) : base(_nome, _data, _sexo, _qtMamas, cor)
         {
             carnivoro = false;

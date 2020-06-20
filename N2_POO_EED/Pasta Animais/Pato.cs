@@ -17,7 +17,14 @@ namespace N2_POO_EED.Animais
         private bool mergulho = true;
         private bool aguaDoce = true;
 
- 
+        public override string ToString()
+        {
+            return "Tipo: Pato" + Environment.NewLine + base.ToString() + $"Altitude Máxima: {altitudeMaxima}"
+                + Environment.NewLine + $"Velocidade De Voo: {velocidadeVoo}km/h" + Environment.NewLine +
+                "Vive Em Terra? Sim" + Environment.NewLine + "Mergulha? Sim" + Environment.NewLine +
+                 "Vive na água doce? Sim" + Environment.NewLine; ;
+        }
+
         public Pato()
         {
             carnivoro = false;

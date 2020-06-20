@@ -10,7 +10,7 @@ using N2_POO_EED.Classes_ancestrais_Animais;
 
 namespace N2_POO_EED.Estruturas_de_dados
 {
-    class Lista: IEnumerable,IEnumerator
+    class Lista : IEnumerable, IEnumerator
     {
         NodoLista primeiro = null; // ponteiro para o primeiro elemento da lista    
         NodoLista ultimo = null;
@@ -196,7 +196,25 @@ namespace N2_POO_EED.Estruturas_de_dados
                 r = r + Environment.NewLine + aux.Dado.ToString();
                 aux = aux.Proximo;
             }
-            return  r.Trim();
+            return r.Trim();
+        }
+        /// <summary>
+        /// Procura na lista e retorna um nodo baseado no parametro (nome) , caso não eo encontre retorna null
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <returns></returns>
+        public NodoLista Find(string nome)
+        {
+          
+            NodoLista aux = primeiro;
+            while (aux != null)
+            {
+                if (aux.Dado.Nome.ToUpper() == nome.ToUpper())
+                    break;
+                else
+                    aux = aux.Proximo;
+            }
+            return aux;
         }
 
         public IEnumerator GetEnumerator()

@@ -10,6 +10,11 @@ namespace N2_POO_EED.Pasta_Animais
 {
     class Tigre : Mamifero, IPredador
     {
+        public override string ToString()
+        {
+            return "Tipo: Tigre" + Environment.NewLine + base.ToString();
+        }
+
         public Tigre(string _nome, DateTime _data, char _sexo, int _qtMamas, string cor) : base(_nome, _data, _sexo, _qtMamas, cor)
         {
             carnivoro = true;

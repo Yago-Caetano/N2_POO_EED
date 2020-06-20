@@ -15,6 +15,7 @@ using N2_POO_EED.Estruturas_de_dados;
 using N2_POO_EED.Classes_ancestrais_Animais;
 using N2_POO_EED.Pasta_Animais;
 using N2_POO_EED.Interfaces_Animais;
+using N2_POO_EED.Animais;
 
 namespace N2_POO_EED
 {
@@ -23,7 +24,7 @@ namespace N2_POO_EED
     /// </summary>
     public partial class animalList : Window
     {
-
+        Lista lista;
         public animalList()
         {
             InitializeComponent();
@@ -37,8 +38,8 @@ namespace N2_POO_EED
 
         private void CbListar_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Lista lista;
-            if(Arvore.QtdeNodosInternos() == 0)
+
+            if (Arvore.QtdeNodosInternos() == 0)
             {
                 MessageBox.Show("Cadastre um animal antes de listar!!!!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -88,6 +89,20 @@ namespace N2_POO_EED
                         txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
                     }
                     break;
+                case 6:
+                    {
+                        txtListar.Text = "";
+                        lista = Arvore.GetAllTiposAnimais(typeof(Animal));
+                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+                    }
+                    break;
+                case 7:
+                    {
+                        txtListar.Text = "";
+                        lista = Arvore.GetAllTiposAnimais(typeof(IPredador));
+                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+                    }
+                    break;
                 default:
                     {
                         txtListar.Text = "";
@@ -95,8 +110,8 @@ namespace N2_POO_EED
                         txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
                     }
                     break;
-            }
 
+            }
 
         }
 
@@ -166,7 +181,7 @@ namespace N2_POO_EED
             coru.Data_Nascimento = new DateTime(2014, 4, 21);
             coru.Nome = "Kuro";
             coru.Sexo = 'F';
-            coru.Cor_penas = "Preta";           
+            coru.Cor_penas = "Preta";
 
             Arvore.Insere(coru);
 
@@ -186,10 +201,91 @@ namespace N2_POO_EED
             Gav.Cor_penas = "Cinza";
 
             Arvore.Insere(Gav);
+
+            Leao Le = new Leao();
+            Le.Cor_pelos = "laranja";
+            Le.Data_Nascimento = Convert.ToDateTime("29/01/2010");
+            Le.QtMamas = 2;
+            Le.Nome = "Simba";
+            Le.Sexo = 'M';
+
+            Arvore.Insere(Le);
+
+            Morcego mor = new Morcego();
+            mor.Data_Nascimento = new DateTime(2019, 4, 21);
+            mor.Nome = "Noibat";
+            mor.Sexo = 'M';
+            mor.Cor_pelos = "Preta";
+            mor.QtMamas = 3;
+
+            Arvore.Insere(mor);
+
+            Ornitorrinco orn = new Ornitorrinco();
+            orn.Cor_pelos = "verde água";
+            orn.Data_Nascimento = new DateTime(2020, 6, 17);
+            orn.Nome = "Perry";
+            orn.QtMamas = 6;
+            orn.Sexo = 'M';
+
+            Arvore.Insere(orn);
+
+            Pato pa = new Pato();
+            pa.Cor_penas = "branco";
+            pa.Data_Nascimento = new DateTime(2018, 8, 12);
+            pa.Nome = "Mist";
+            pa.Sexo = 'F';
+
+            Arvore.Insere(pa);
+
+            Pinguim pin = new Pinguim();
+            pin.Cor_penas = "preta";
+            pin.Data_Nascimento = new DateTime(2015, 4, 4);
+            pin.Nome = "piplup";
+            pin.Sexo = 'M';
+
+            Arvore.Insere(pin);
+
+            Pombo pom = new Pombo();
+            pom.Cor_penas = "cinza";
+            pom.Data_Nascimento = new DateTime(2011, 3, 1);
+            pom.Nome = "pidove";
+            pom.Sexo = 'M';
+
+            Arvore.Insere(pom);
+
+            Tartaruga tar = new Tartaruga();
+            tar.Data_Nascimento = new DateTime(1980, 11, 20);
+            tar.Nome = "Wuo";
+            tar.Sexo = 'M';
+
+            Arvore.Insere(tar);
+
+            Tigre tig = new Tigre();
+            tig.Cor_pelos = "laranja";
+            tig.Data_Nascimento = new DateTime(2000, 2, 20);
+            tig.QtMamas = 6;
+            tig.Nome = "Bonde Do Tigrão";
+            tig.Sexo = 'M';
+
+            Arvore.Insere(tig);
         }
 
-        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
+
+        private void BtnPesquisar_Click(object sender, RoutedEventArgs e)
         {
+            NodoLista aux = new NodoLista();
+            try
+            {
+                aux = lista.Find(txtPesquisar.Text);
+                if (aux == null)
+                    MessageBox.Show("O nome não foi encontrado!!!", "Error", MessageBoxButton.OK,MessageBoxImage.Error);
+                else
+                    MessageBox.Show(aux.Dado.Nome);
+            }
+            catch
+            {
+                MessageBox.Show("A lista está vazia!!!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
         }
     }
