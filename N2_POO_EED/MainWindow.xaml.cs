@@ -31,6 +31,10 @@ namespace N2_POO_EED
         {
             animalList Tela = new animalList();
             Tela.Show();
+        private void Btn_telaCadastro_Click(object sender, RoutedEventArgs e)
+        {
+            create telaCadastro = new create();
+            telaCadastro.Show();
         }
     }
 }
