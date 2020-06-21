@@ -77,6 +77,12 @@ namespace N2_POO_EED.Classes_ancestrais_Animais
                 return (int)(DateTime.Now.Subtract(dataNascimento).TotalDays);
         }
 
+        public override string ToString()
+        {
+            return $"Nome: {nome} " + Environment.NewLine + $"Data De Nascimento: {dataNascimento.ToShortDateString()}" + Environment.NewLine
+                + $"Sexo: {sexo}" + Environment.NewLine + $"Carnívoro? {(carnivoro == true ? "Sim" : "Não")}" + Environment.NewLine
+                + $"Peçonhento? {(peconhento == true ? "Sim" : "Não")}" + Environment.NewLine;
+        }
 
         public abstract void Movimentar();
 

@@ -10,6 +10,11 @@ namespace N2_POO_EED.Pasta_Animais
 {
     class Tartaruga : Reptil,IOviparo
     {
+        public override string ToString()
+        {
+            return "Tipo: Tartaruga" + Environment.NewLine + base.ToString();
+        }
+
         public Tartaruga(string _nome, DateTime _data, char _sexo) : base(_nome, _data, _sexo)
         {
             escamas = true;

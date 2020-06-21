@@ -153,6 +153,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ground.png" />
+    <Resource Include="tela listar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Prancheta 2.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="quadro.png" />

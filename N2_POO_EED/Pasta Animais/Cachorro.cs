@@ -12,6 +12,10 @@ namespace N2_POO_EED.Pasta_Animais
 {
     class Cachorro : Mamifero, IPredador
     {
+        public override string ToString()
+        {
+          return "Tipo: Cachorro" + Environment.NewLine + base.ToString();
+        }
         public Cachorro(string _nome, DateTime _data, char _sexo, int _qtMamas, string cor):base(_nome, _data, _sexo, _qtMamas, cor)
         {
             carnivoro = true;

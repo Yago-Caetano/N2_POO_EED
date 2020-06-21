@@ -13,5 +13,6 @@ namespace N2_POO_EED.Interfaces_Animais
         bool Mergulho { get;}
 
         bool AguaDoce { get; }
+
     }
 }

@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using N2_POO_EED.Pasta_Animais;
+using N2_POO_EED.Estruturas_de_dados;
 
 namespace N2_POO_EED
 {
@@ -23,6 +25,12 @@ namespace N2_POO_EED
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void BtnList_Click(object sender, RoutedEventArgs e)
+        {
+            animalList Tela = new animalList();
+            Tela.Show();
         }
     }
 }

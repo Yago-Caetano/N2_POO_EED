@@ -12,6 +12,11 @@ namespace N2_POO_EED.Pasta_Animais
     {
         private int altitudeMaxima = 5000;
         private double velocidadeVoo = 102.0;
+        public override string ToString()
+        {
+            return "Tipo: Pombo" + Environment.NewLine + base.ToString() + $"Altitude Máxima: {altitudeMaxima}"
+                + Environment.NewLine + $"Velocidade De Voo: {velocidadeVoo}km/h" + Environment.NewLine;
+        }
 
         public Pombo()
         {

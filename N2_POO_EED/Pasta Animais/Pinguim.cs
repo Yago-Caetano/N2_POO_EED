@@ -13,6 +13,14 @@ namespace N2_POO_EED.Pasta_Animais
         private bool viveTerra = true;
         private bool mergulho = true;
         private bool aguaDoce = false;
+
+        public override string ToString()
+        {
+            return "Tipo: Pinguim" + Environment.NewLine + base.ToString() +  "Vive Em Terra? Sim"
+                + Environment.NewLine + "Mergulha? Sim" + Environment.NewLine +
+                 "Vive na água doce? Não" + Environment.NewLine; ;
+        }
+
         public Pinguim()
         {
             carnivoro = false;
