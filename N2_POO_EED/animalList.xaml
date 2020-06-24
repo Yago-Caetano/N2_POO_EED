@@ -7,12 +7,16 @@
         mc:Ignorable="d"
         Title="animalList" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="343*"/>
+            <ColumnDefinition Width="53*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="92*"/>
             <RowDefinition Height="8*"/>
             <RowDefinition Height="319*"/>
         </Grid.RowDefinitions>
-        <Image Margin="0,-23,0,0" Source="Prancheta 2.png" Stretch="Fill" Grid.RowSpan="3"/>
+        <Image Margin="0,-23,0,0" Source="Prancheta 2.png" Stretch="Fill" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
 
         <ComboBox x:Name="cbListar" HorizontalAlignment="Left" Margin="8,31,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CbListar_SelectionChanged" BorderBrush="{x:Null}">
             <ComboBox.Background>
@@ -32,7 +36,7 @@
         </ComboBox>
         <Button x:Name="btnCriarBaleia" Content="Baleia" HorizontalAlignment="Left" Margin="21,79,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
         <Button x:Name="btnCachorro" Content="cachorro" HorizontalAlignment="Left" Margin="23,115,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Click="BtnCachorro_Click"/>
-        <Image Margin="135,10,110,25" Source="quadro.png" Stretch="Fill" Grid.RowSpan="3"/>
+        <Image Margin="135,10,4.314,25" Source="quadro.png" Stretch="Fill" Grid.RowSpan="3"/>
         <TextBox x:Name="txtListar" HorizontalAlignment="Left" Height="347" Margin="160,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="489" Grid.RowSpan="3" Background="White" BorderBrush="White" IsReadOnlyCaretVisible="True" IsReadOnly="True"/>
         <Button x:Name="btnCriarCobra" Content="Cobra" HorizontalAlignment="Left" Margin="23,159,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Click="BtnCriarCobra_Click"/>
         <Button x:Name="btnCriarTodos" Content="Criar Tudo" HorizontalAlignment="Left" Margin="23,205,0,0" Grid.Row="2" VerticalAlignment="Top" Width="75" Click="BtnCriarTodos_Click"/>
@@ -40,6 +44,7 @@
         <Label Content="Pesquisar por nome" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,-0.462" Margin="-5,75,0,0" FontSize="14" Foreground="#FFC70101" FontWeight="Bold" Grid.RowSpan="3"/>
         <TextBox x:Name="txtPesquisar" HorizontalAlignment="Left" Height="23" Margin="10,0,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="btnPesquisar" Content="Pesquisar" HorizontalAlignment="Left" Margin="25,29,0,0" Grid.Row="2" VerticalAlignment="Top" Width="84" Height="27" Click="BtnPesquisar_Click"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="95.686,225,-90,-6" Grid.Row="2" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
 
     </Grid>
 </Window>

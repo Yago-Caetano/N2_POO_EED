@@ -59,6 +59,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="animalActions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="animalDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -77,6 +81,9 @@
     </Page>
     <Compile Include="about.xaml.cs">
       <DependentUpon>about.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="animalActions.xaml.cs">
+      <DependentUpon>animalActions.xaml</DependentUpon>
     </Compile>
     <Compile Include="animalDetails.xaml.cs">
       <DependentUpon>animalDetails.xaml</DependentUpon>
