@@ -166,7 +166,7 @@ namespace N2_POO_EED
             switch (cb_tipoAnimal.SelectedIndex)
             {
                 case 0: // Baleia
-                    HabilitarOuDesabilitarComponentes(true, false, true); 
+                    HabilitarOuDesabilitarComponentes(true, false, true);
                     break;
                 case 1: // Cachorro
                     HabilitarOuDesabilitarComponentes(true, false, true);
@@ -238,7 +238,7 @@ namespace N2_POO_EED
             }
             else
                 return false;
-                
+
         }
 
         /// <summary>
@@ -383,7 +383,7 @@ namespace N2_POO_EED
                     return;
 
                 // Se não estava vazio, realiza a inserção de fato.
-                (tipoAnimal as Ave).Cor_penas = txt_corPenas.Text; 
+                (tipoAnimal as Ave).Cor_penas = txt_corPenas.Text;
             }
             if (tipoAnimal is Mamifero)
             {
@@ -421,23 +421,15 @@ namespace N2_POO_EED
         {
             // Passa os parâmetros para essa página citada para que ela possa indentificar a posição desse animal na lista e efetuar suas ações.
             NodoLista aux = new NodoLista();
-            try
-            {
-                aux = listaAnimais.Find(txt_nome.Text);
-                if (aux == null)
-                    MessageBox.Show("O nome não foi encontrado!!!", "Error", MessageBoxButton.OK,MessageBoxImage.Error);
-                else
-                    MessageBox.Show(aux.Dado.Nome);
-                // aqui preciso levar esse dado para tela de eventos
-               // if() como eu seleciono o tipo do animal para levar a descrição dele para a tela
-               // de ações
-            }
-            catch
-            {
+
+            aux = listaAnimais.Find(null);
+            if (aux == null)
                 MessageBox.Show("A lista está vazia!!!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            else
+            {
+                animalActions action = new animalActions();
+                action.ShowDialog();
             }
-            animalActions action = new animalActions();
-            action.ShowDialog();
         }
     }
 }
