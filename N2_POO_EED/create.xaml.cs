@@ -420,6 +420,25 @@ namespace N2_POO_EED
         private void Btn_verAnimalCadastrado_Click(object sender, RoutedEventArgs e)
         {
             // Passa os parâmetros para essa página citada para que ela possa indentificar a posição desse animal na lista e efetuar suas ações.
+            NodoLista aux = new NodoLista();
+            try
+            {
+                aux = listaAnimais.Find(txt_nome.Text);
+                if (aux == null)
+                    MessageBox.Show("O nome não foi encontrado!!!", "Error", MessageBoxButton.OK,MessageBoxImage.Error);
+                else
+                    MessageBox.Show(aux.Dado.Nome);
+                // aqui preciso levar esse dado para tela de eventos
+               // if() como eu seleciono o tipo do animal para levar a descrição dele para a tela
+               // de ações
+            }
+            catch
+            {
+                MessageBox.Show("A lista está vazia!!!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            animalActions action = new animalActions();
+            action.ShowDialog();
         }
     }
 }
+

@@ -5,37 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:N2_POO_EED"
         mc:Ignorable="d"
-        Title="MainWindow" Height="454" Width="763">
-    <Grid Margin="0,0,64,10">
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="0,0,2,-21">
         <Image HorizontalAlignment="Left" Height="100" Margin="136,102,0,0" VerticalAlignment="Top" Width="100"/>
-        <Image HorizontalAlignment="Left" Height="425" VerticalAlignment="Top" Width="754" Source="background.png" Margin="0,0,-62,-12"/>
-        <Image HorizontalAlignment="Left" Height="234" Margin="-32,334,-106,-155" VerticalAlignment="Top" Width="829" Source="ground.png" RenderTransformOrigin="0.5,0.5">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.613"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <Image HorizontalAlignment="Left" Height="349" Margin="136,37,-18,0" VerticalAlignment="Top" Width="573" Source="quadro.png" RenderTransformOrigin="0.456,0.479"/>
-        <Label x:Name="_Animal_Selecionado_" Content="(Animal Selecionado)" HorizontalAlignment="Left" Margin="262,10,0,0" VerticalAlignment="Top" Width="240" Cursor="None" FontFamily="Arial" FontSize="24"/>
-        <Label x:Name="_Animal_Selecionado__Copy" Content="(Ações do animal)" HorizontalAlignment="Left" Margin="409,119,0,0" VerticalAlignment="Top" Width="240" Cursor="None" FontFamily="Arial" FontSize="24"/>
-        <Label x:Name="_Animal_Selecionado__Copy1" Content="|" HorizontalAlignment="Left" Margin="373,216,0,0" VerticalAlignment="Top" Width="32" Cursor="SizeNESW" FontFamily="Arial" FontSize="24" Height="44" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" Foreground="#FFB87C36" FontWeight="Bold">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleY="14"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform Y="-12"/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <MediaElement HorizontalAlignment="Left" Height="179" Margin="152,119,0,0" VerticalAlignment="Top" Width="216"/>
-        <Slider HorizontalAlignment="Left" Margin="152,303,0,0" VerticalAlignment="Top" Height="30" Width="216"/>
-        <Slider HorizontalAlignment="Left" Margin="284,333,0,0" VerticalAlignment="Top" Width="84" Height="19"/>
-        <Label Content="Volume" HorizontalAlignment="Left" Margin="200,338,0,0" VerticalAlignment="Top" Width="53"/>
+        <Image HorizontalAlignment="Left" Height="430" VerticalAlignment="Top" Width="790" Source="Prancheta 2.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="194" Margin="263,199,0,0" VerticalAlignment="Top" Width="265" Source="tittle.png"/>
+        <Image HorizontalAlignment="Left" Height="40" Margin="428,22,0,0" VerticalAlignment="Top" Width="100" Source="create.png" MouseDown="Image_MouseDown"/>
+        <Image HorizontalAlignment="Left" Height="66" Margin="570,22,0,0" VerticalAlignment="Top" Width="182" Source="select.png" MouseDown="Image_MouseDown_1"/>
 
     </Grid>
 </Window>

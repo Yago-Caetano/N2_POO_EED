@@ -6,13 +6,5 @@
         xmlns:local="clr-namespace:N2_POO_EED"
         mc:Ignorable="d"
         Title="animalDetails" Height="450" Width="800">
-    <Grid>
-        <Image HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792" Source="tela listar.png" Stretch="Fill"/>
-        <MediaElement HorizontalAlignment="Left" Height="169" Margin="166,104,0,0" VerticalAlignment="Top" Width="246"/>
-        <Slider HorizontalAlignment="Left" Margin="166,278,0,0" VerticalAlignment="Top" Width="105"/>
-        <Button  HorizontalAlignment="Left" Margin="166,313,0,0" VerticalAlignment="Top" Width="29" RenderTransformOrigin="0.248,0.079" Height="28">
-            <Image Source="C:\Users\guilhermet\OneDrive - Toledo do Brasil\Documentos\GitHub\N2_POO_EED\N2_POO_EED\assets\Screen_Resources\icons\iconPlay.png"/>
-        </Button>
-
-    </Grid>
+    <Grid/>
 </Window>

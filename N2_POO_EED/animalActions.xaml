@@ -6,5 +6,34 @@
         xmlns:local="clr-namespace:N2_POO_EED"
         mc:Ignorable="d"
         Title="animalActions" Height="450" Width="800">
-    <MediaElement HorizontalAlignment="Left" Height="100" Margin="144,232,0,0" VerticalAlignment="Top" Width="100"/>
+    <Grid Margin="0,0,2,0">
+        <Image HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="790" Source="tela listar.png" Stretch="Fill"/>
+        <MediaElement HorizontalAlignment="Left" Height="143" Margin="180,86,0,0" VerticalAlignment="Top" Width="218"/>
+        <Slider HorizontalAlignment="Left" Margin="290,244,0,0" VerticalAlignment="Top" Height="18" Width="65"/>
+        <Label Content="|" HorizontalAlignment="Left" Margin="398,-97,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFBF8847" Height="54" RenderTransformOrigin="0.462,0.588" Width="18" FontSize="36">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.025"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+            <Label.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="10"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.LayoutTransform>
+        </Label>
+        <Image HorizontalAlignment="Left" Height="23" Margin="360,239,0,0" VerticalAlignment="Top" Width="33" Source="iconSound.jpg"/>
+        <Image HorizontalAlignment="Left" Height="23" Margin="192,239,0,0" VerticalAlignment="Top" Width="27" Source="iconPlay.png" RenderTransformOrigin="1.296,0.391"/>
+        <ComboBox x:Name="cboxListaAcoes" HorizontalAlignment="Left" Margin="418,117,0,0" VerticalAlignment="Top" Width="199"/>
+        <Label Content="Ações disponiveis" HorizontalAlignment="Left" Margin="418,86,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Animal Selecionado" HorizontalAlignment="Left" Margin="347,31,0,0" VerticalAlignment="Top" Width="120"/>
+        <ListBox HorizontalAlignment="Left" Height="183" Margin="418,186,0,0" VerticalAlignment="Top" Width="199"/>
+        <Label Content="Informações do Animal" HorizontalAlignment="Left" Margin="418,160,0,0" VerticalAlignment="Top" Width="155"/>
+    </Grid>
 </Window>

@@ -168,5 +168,20 @@
   <ItemGroup>
     <Resource Include="quadro.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tittle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="iconSound.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="iconPlay.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

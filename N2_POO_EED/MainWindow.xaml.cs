@@ -27,16 +27,28 @@ namespace N2_POO_EED
             InitializeComponent();
         }
 
-        private void BtnList_Click(object sender, RoutedEventArgs e)
+      /*  private void BtnList_Click(object sender, RoutedEventArgs e)
         {
             animalList Tela = new animalList();
             Tela.Show();
-        }
+        }*/
 
-        private void Btn_telaCadastro_Click(object sender, RoutedEventArgs e)
+       /* private void Btn_telaCadastro_Click(object sender, RoutedEventArgs e)
         {
             create telaCadastro = new create();
             telaCadastro.Show();
+        }*/
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            create telaCadastro = new create();
+            telaCadastro.Show();
+        }
+
+        private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            animalList list = new animalList();
+            list.Show();
         }
     }
 }
