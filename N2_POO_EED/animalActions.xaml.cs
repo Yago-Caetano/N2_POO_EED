@@ -9,10 +9,12 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MessageBox = System.Windows.MessageBox;
 
 namespace N2_POO_EED
 {
@@ -25,31 +27,62 @@ namespace N2_POO_EED
         {
             InitializeComponent();
         }
-
         Lista list;
+
+        MediaElement media;
 
         private void cboxAnimaisCadastrados_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+            cboxAnimaisCadastrados.DataContext = list;
         }
 
         private void btnNomeAnimal_Click(object sender, RoutedEventArgs e)
         {
-           
             NodoLista aux = new NodoLista();
+
             try
             {
-                aux = list.Find(txtNome.Text);
-                if (aux == null)
-                    MessageBox.Show("O nome não foi encontrado!!!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                if (Arvore.PesquisaValor(txtNome, aux))
+                {
+                    //animal encontrado
+                    //aux = list.Find(txtNome.Text);
+                    lbAnimais.Items.Add(aux);
+                }
                 else
-                lbAnimais.Items.Add(aux);
-                txtNome.Clear();
+                    MessageBox.Show("O nome não foi encontrado!!!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch
             {
-                MessageBox.Show("Nenhum animal foi cadastrado!!!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Cadastrar um animal primeiro!!!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void Image_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.AddExtension = true;
+            ofd.DefaultExt = ".";
+            ofd.Filter = "Media Files (*.*)|*.*";
+            ofd.ShowDialog();
+
+            media = new MediaElement();
+
+            try { media.Source = new Uri(ofd.FileName); }
+            catch { new NullReferenceException("error"); }
+
+            System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            //dispatcherTimer.Tick += new EventHandler(timer_Tick);
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            dispatcherTimer.Start();
+
+        }
+
+        
+
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
     }
 }

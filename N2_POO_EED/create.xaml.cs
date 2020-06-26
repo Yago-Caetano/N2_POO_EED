@@ -420,16 +420,9 @@ namespace N2_POO_EED
         private void Btn_verAnimalCadastrado_Click(object sender, RoutedEventArgs e)
         {
             // Passa os parâmetros para essa página citada para que ela possa indentificar a posição desse animal na lista e efetuar suas ações.
-            NodoLista aux = new NodoLista();
 
-            aux = listaAnimais.Find(null);
-            if (aux == null)
-                MessageBox.Show("A lista está vazia!!!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            else
-            {
-                animalActions action = new animalActions();
-                action.ShowDialog();
-            }
+            animalActions action = new animalActions();
+            action.ShowDialog();
         }
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace N2_POO_EED.Estruturas_de_dados
 
@@ -27,6 +28,16 @@ namespace N2_POO_EED.Estruturas_de_dados
         }
 
         static public NodoArvore GetRaiz() { return raiz; }
+
+        internal static bool Pesquisar(object p)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static bool PesquisaValor(TextBox txtNome, NodoLista aux)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Pesquisa um nodo na árvore e devolve o nodo. Caso não encontre, devolve o nodo
