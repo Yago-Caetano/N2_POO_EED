@@ -27,7 +27,7 @@ namespace N2_POO_EED
         {
             InitializeComponent();
         }
-        Lista list;
+        Lista list = Arvore.GetListaPorIdade();
 
         MediaElement media;
 

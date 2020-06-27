@@ -24,6 +24,7 @@ namespace N2_POO_EED
     /// </summary>
     public partial class animalList : Window
     {
+        
         Lista lista;
         public animalList()
         {

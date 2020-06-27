@@ -23,7 +23,6 @@ namespace N2_POO_EED
     /// </summary>
     public partial class create : Window
     {
-        static Lista listaAnimais = new Lista(); // Lista estática de animais.
 
         public create()
         {
@@ -125,21 +124,21 @@ namespace N2_POO_EED
             ti.Nome = "König Tiger";
 
 
-
-            listaAnimais.InserirNoFim(b);
-            listaAnimais.InserirNoFim(c);
-            listaAnimais.InserirNoFim(cb);
-            listaAnimais.InserirNoFim(cj);
-            listaAnimais.InserirNoFim(gv);
-            listaAnimais.InserirNoFim(gt);
-            listaAnimais.InserirNoFim(l);
-            listaAnimais.InserirNoFim(m);
-            listaAnimais.InserirNoFim(o);
-            listaAnimais.InserirNoFim(p);
-            listaAnimais.InserirNoFim(pi);
-            listaAnimais.InserirNoFim(po);
-            listaAnimais.InserirNoFim(t);
-            listaAnimais.InserirNoFim(ti);
+           
+            Arvore.Insere(b);
+            Arvore.Insere(c);
+            Arvore.Insere(cb);
+            Arvore.Insere(cj);
+            Arvore.Insere(gv);
+            Arvore.Insere(gt);
+            Arvore.Insere(l);
+            Arvore.Insere(m);
+            Arvore.Insere(o);
+            Arvore.Insere(p);
+            Arvore.Insere(pi);
+            Arvore.Insere(po);
+            Arvore.Insere(t);
+            Arvore.Insere(ti);
         }
 
         /// <summary>
@@ -406,7 +405,7 @@ namespace N2_POO_EED
                 (tipoAnimal as Mamifero).QtMamas = quantMamas;
             }
 
-            listaAnimais.InserirNoFim(tipoAnimal); // Realiza, por fim, a inserção.
+            Arvore.Insere(tipoAnimal); // Realiza, por fim, a inserção.
 
             MessageBox.Show("Animal cadastrado!", "Cadastro realizado", MessageBoxButton.OK);
             LimparCampos();
