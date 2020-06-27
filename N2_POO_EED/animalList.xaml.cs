@@ -46,248 +46,124 @@ namespace N2_POO_EED
                 return;
             }
 
+
+
             switch (cbListar.SelectedIndex)
             {
                 case 0:
                     {
-                        txtListar.Text = "";
+                        lbListar.Items.Clear();
                         lista = Arvore.GetAllTiposAnimais(typeof(Animal));
-                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+
+                        ListarDados();
                     }
                     break;
                 case 1:
                     {
-                        txtListar.Text = "";
+                        lbListar.Items.Clear();
                         lista = Arvore.GetAllTiposAnimais(typeof(Mamifero));
-                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+
+                        ListarDados();
                     }
                     break;
                 case 2:
                     {
-                        txtListar.Text = "";
+                        lbListar.Items.Clear();
                         lista = Arvore.GetAllTiposAnimais(typeof(IOviparo));
-                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+                        ListarDados();
                     }
                     break;
                 case 3:
                     {
-                        txtListar.Text = "";
+                        lbListar.Items.Clear();
                         lista = Arvore.GetAllTiposAnimais(typeof(IAquatico));
-                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+                        ListarDados();
                     }
                     break;
                 case 4:
                     {
-                        txtListar.Text = "";
+                        lbListar.Items.Clear();
                         lista = Arvore.GetAllTiposAnimais(typeof(IVoar));
-                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+                        ListarDados();
                     }
                     break;
                 case 5:
                     {
-                        txtListar.Text = "";
+
                         lista = Arvore.GetListaPorIdade();
-                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+                        lbListar.Items.Clear();
+                        ListarDados();
                     }
                     break;
                 case 6:
                     {
-                        txtListar.Text = "";
                         lista = Arvore.GetAllTiposAnimais(typeof(Animal));
-                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+                        lbListar.Items.Clear();
+                        ListarDados();
                     }
                     break;
                 case 7:
                     {
-                        txtListar.Text = "";
+                        lbListar.Items.Clear();
                         lista = Arvore.GetAllTiposAnimais(typeof(IPredador));
-                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+                        ListarDados();
                     }
                     break;
                 default:
                     {
-                        txtListar.Text = "";
+                        lbListar.Items.Clear();
                         lista = Arvore.GetAllTiposAnimais(typeof(Animal));
-                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+                        ListarDados();
                     }
                     break;
 
             }
 
         }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Insere dados no listbox
+        /// </summary>
+        public void ListarDados()
         {
-            Baleia ba = new Baleia();
-            ba.Cor_pelos = "Azul";
-            ba.Data_Nascimento = Convert.ToDateTime("23/03/2001");
-            ba.Nome = "Oliver";
-            ba.QtMamas = 5;
-            ba.Sexo = 'M';
+            string[] nomes;
+            nomes = lista.ListarNomes().Split('%');
 
-            Arvore.Insere(ba);
+            for (int x = 0; x < lista.qtde; x++)
+            {
+                lbListar.Items.Add(nomes[x]);
+            }
         }
 
 
-        private void BtnCachorro_Click(object sender, RoutedEventArgs e)
+        private void LbListar_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Cachorro Ca = new Cachorro();
-            Ca.Cor_pelos = "Marrom";
-            Ca.Data_Nascimento = Convert.ToDateTime("23/03/2001");
-            Ca.QtMamas = 6;
-            Ca.Nome = "Cátia";
-            Ca.Sexo = 'F';
-
-            Arvore.Insere(Ca);
-        }
-
-        private void BtnCriarCobra_Click(object sender, RoutedEventArgs e)
-        {
-            Cobra Co = new Cobra();
-            Co.Data_Nascimento = Convert.ToDateTime("25/08/1999");
-            Co.Nome = "Sérgio";
-            Co.Sexo = 'M';
-
-            Arvore.Insere(Co);
-        }
-
-        private void BtnCriarTodos_Click(object sender, RoutedEventArgs e)
-        {
-            Baleia ba = new Baleia();
-            ba.Cor_pelos = "Azul";
-            ba.Data_Nascimento = Convert.ToDateTime("23/03/2001");
-            ba.Nome = "Oliver";
-            ba.QtMamas = 5;
-            ba.Sexo = 'M';
-
-            Arvore.Insere(ba);
-
-            Cachorro Ca = new Cachorro();
-            Ca.Cor_pelos = "Marrom";
-            Ca.Data_Nascimento = Convert.ToDateTime("23/03/2001");
-            Ca.QtMamas = 6;
-            Ca.Nome = "Cátia";
-            Ca.Sexo = 'F';
-
-            Arvore.Insere(Ca);
-
-            Cobra Co = new Cobra();
-            Co.Data_Nascimento = Convert.ToDateTime("25/08/1999");
-            Co.Nome = "Sérgio";
-            Co.Sexo = 'M';
-
-            Arvore.Insere(Co);
-
-            Coruja coru = new Coruja();
-            coru.Data_Nascimento = new DateTime(2014, 4, 21);
-            coru.Nome = "Kuro";
-            coru.Sexo = 'F';
-            coru.Cor_penas = "Preta";
-
-            Arvore.Insere(coru);
-
-            Gato Ga = new Gato();
-            Ga.Cor_pelos = "cinza";
-            Ga.Data_Nascimento = Convert.ToDateTime("12/08/2007");
-            Ga.QtMamas = 6;
-            Ga.Nome = "Miss";
-            Ga.Sexo = 'F';
-
-            Arvore.Insere(Ga);
-
-            Gaviao Gav = new Gaviao();
-            Gav.Data_Nascimento = new DateTime(2000, 7, 2);
-            Gav.Nome = "Pedrito";
-            Gav.Sexo = 'M';
-            Gav.Cor_penas = "Cinza";
-
-            Arvore.Insere(Gav);
-
-            Leao Le = new Leao();
-            Le.Cor_pelos = "laranja";
-            Le.Data_Nascimento = Convert.ToDateTime("29/01/2010");
-            Le.QtMamas = 2;
-            Le.Nome = "Simba";
-            Le.Sexo = 'M';
-
-            Arvore.Insere(Le);
-
-            Morcego mor = new Morcego();
-            mor.Data_Nascimento = new DateTime(2019, 4, 21);
-            mor.Nome = "Noibat";
-            mor.Sexo = 'M';
-            mor.Cor_pelos = "Preta";
-            mor.QtMamas = 3;
-
-            Arvore.Insere(mor);
-
-            Ornitorrinco orn = new Ornitorrinco();
-            orn.Cor_pelos = "verde água";
-            orn.Data_Nascimento = new DateTime(2020, 6, 17);
-            orn.Nome = "Perry";
-            orn.QtMamas = 6;
-            orn.Sexo = 'M';
-
-            Arvore.Insere(orn);
-
-            Pato pa = new Pato();
-            pa.Cor_penas = "branco";
-            pa.Data_Nascimento = new DateTime(2018, 8, 12);
-            pa.Nome = "Mist";
-            pa.Sexo = 'F';
-
-            Arvore.Insere(pa);
-
-            Pinguim pin = new Pinguim();
-            pin.Cor_penas = "preta";
-            pin.Data_Nascimento = new DateTime(2015, 4, 4);
-            pin.Nome = "piplup";
-            pin.Sexo = 'M';
-
-            Arvore.Insere(pin);
-
-            Pombo pom = new Pombo();
-            pom.Cor_penas = "cinza";
-            pom.Data_Nascimento = new DateTime(2011, 3, 1);
-            pom.Nome = "pidove";
-            pom.Sexo = 'M';
-
-            Arvore.Insere(pom);
-
-            Tartaruga tar = new Tartaruga();
-            tar.Data_Nascimento = new DateTime(1980, 11, 20);
-            tar.Nome = "Wuo";
-            tar.Sexo = 'M';
-
-            Arvore.Insere(tar);
-
-            Tigre tig = new Tigre();
-            tig.Cor_pelos = "laranja";
-            tig.Data_Nascimento = new DateTime(2000, 2, 20);
-            tig.QtMamas = 6;
-            tig.Nome = "Bonde Do Tigrão";
-            tig.Sexo = 'M';
-
-            Arvore.Insere(tig);
-        }
-
-
-        private void BtnPesquisar_Click(object sender, RoutedEventArgs e)
-        {
-            NodoLista aux = new NodoLista();
             try
             {
-                aux = lista.Find(txtPesquisar.Text);
-                if (aux == null)
-                    MessageBox.Show("O nome não foi encontrado!!!", "Error", MessageBoxButton.OK,MessageBoxImage.Error);
+                int i = lbListar.SelectedIndex;
+                string nome = lbListar.Items[i].ToString();
+                string[] nomes = nome.Split('\n');
+                nome = nomes[1].Substring(nome.IndexOf(' '));
+                nome = nome.Replace("\r", "").Trim();
+                lbListar.SelectedItem = null;
+
+
+
+                if (MessageBox.Show($"Tem certeza que quer usar as ações do animal {nome} ?", "Confirmação", MessageBoxButton.YesNo,MessageBoxImage.Question) == MessageBoxResult.Yes)
+                {
+                    PassarDados.nome = nome;
+                    animalActions novaTela = new animalActions();
+                    novaTela.Show();
+                    this.Close();
+                }
                 else
-                    MessageBox.Show(aux.Dado.Nome);
+                {
+                    return;
+                }
             }
             catch
             {
-                MessageBox.Show("A lista está vazia!!!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
-
         }
     }
 }

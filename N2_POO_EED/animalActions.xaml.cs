@@ -26,10 +26,15 @@ namespace N2_POO_EED
         public animalActions()
         {
             InitializeComponent();
+            if(PassarDados.nome != "")
+            {
+                txtNome.Text = PassarDados.nome;
+            }
         }
         Lista list = Arvore.GetListaPorIdade();
 
         MediaElement media;
+        
 
         private void cboxAnimaisCadastrados_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -39,6 +44,7 @@ namespace N2_POO_EED
         private void btnNomeAnimal_Click(object sender, RoutedEventArgs e)
         {
             NodoLista aux = new NodoLista();
+            
 
             try
             {
