@@ -64,10 +64,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="animalDetails.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="animalList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -85,9 +81,6 @@
     </Compile>
     <Compile Include="animalActions.xaml.cs">
       <DependentUpon>animalActions.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="animalDetails.xaml.cs">
-      <DependentUpon>animalDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="animalList.xaml.cs">
       <DependentUpon>animalList.xaml</DependentUpon>
@@ -165,19 +158,7 @@
     <Resource Include="tela listar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Prancheta 2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="quadro.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="tittle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="create.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="select.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="iconSound.jpg" />
@@ -190,6 +171,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="iconPause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="criar.png" />
+    <Resource Include="Selecionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Titulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Prancheta 1%404x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

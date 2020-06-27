@@ -70,7 +70,6 @@ namespace N2_POO_EED
        
                 Console.WriteLine(metodo.Name);
 
-   
             }
 
         }
@@ -182,7 +181,7 @@ namespace N2_POO_EED
                     AnimalName = "pigeon";
                     break;
 
-                case "Tartatuga":
+                case "Tartaruga":
                     AnimalName = "turtle";
 
                     break;

@@ -16,28 +16,36 @@
             <RowDefinition Height="8*"/>
             <RowDefinition Height="319*"/>
         </Grid.RowDefinitions>
-        <Image Margin="0,-23,0,0" Source="Prancheta 2.png" Stretch="Fill" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
+        <Image Margin="0,-23,0,0" Source="background.png" Stretch="Fill" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
+
+        <Image HorizontalAlignment="Left" Height="100" Margin="-92,278,-68,-59" Grid.Row="2" VerticalAlignment="Top" Width="952" Grid.ColumnSpan="2" Source="ground.png" Stretch="Fill"/>
 
         <ComboBox x:Name="cbListar" HorizontalAlignment="Left" Margin="8,53,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CbListar_SelectionChanged" BorderBrush="{x:Null}">
+            <ComboBox.Effect>
+                <DropShadowEffect BlurRadius="20" Opacity="0.4"/>
+            </ComboBox.Effect>
             <ComboBox.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                     <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                    <GradientStop Color="{DynamicResource {x:Static SystemColors.MenuHighlightColorKey}}" Offset="1"/>
+                    <GradientStop Color="{DynamicResource {x:Static SystemColors.ControlLightLightColorKey}}" Offset="1"/>
                 </LinearGradientBrush>
             </ComboBox.Background>
             <ComboBoxItem Content="Todos&#xA;" HorizontalAlignment="Left" Width="118" Height="22"/>
             <ComboBoxItem Content="Mamíferos" HorizontalAlignment="Left" Width="118"/>
-            <ComboBoxItem Content="Ovíparos&#xD;&#xA;" HorizontalAlignment="Left" Width="118" Height="25"/>
-            <ComboBoxItem Content="Aquático&#xD;&#xA;" HorizontalAlignment="Left" Width="118" Height="24"/>
+            <ComboBoxItem Content="Ovíparos&#xA;" HorizontalAlignment="Left" Width="118" Height="25"/>
+            <ComboBoxItem Content="Aquático&#xA;" HorizontalAlignment="Left" Width="118" Height="24"/>
             <ComboBoxItem Content="Voadores" HorizontalAlignment="Left" Width="118"/>
-            <ComboBoxItem Content="Idade&#xD;&#xA;" HorizontalAlignment="Left" Width="118" Height="22"/>
-            <ComboBoxItem Content="Ordem Alfabética&#xD;&#xA;" HorizontalAlignment="Left" Width="118" Height="22"/>
+            <ComboBoxItem Content="Idade&#xA;" HorizontalAlignment="Left" Width="118" Height="22"/>
+            <ComboBoxItem Content="Ordem Alfabética&#xA;" HorizontalAlignment="Left" Width="118" Height="22"/>
             <ComboBoxItem Content="Predadores" HorizontalAlignment="Left" Width="118"/>
         </ComboBox>
-        <Image Margin="135,10,4.314,25" Source="quadro.png" Stretch="Fill" Grid.RowSpan="3"/>
+        <Image Margin="135,10,4.314,25" Source="quadro.png" Stretch="Fill" Grid.RowSpan="3">
+            <Image.Effect>
+                <DropShadowEffect BlurRadius="20" Opacity="0" RenderingBias="Quality"/>
+            </Image.Effect>
+        </Image>
         <TextBox x:Name="txtListar" HorizontalAlignment="Left" Height="29" Margin="386,-24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" Background="White" BorderBrush="White" IsReadOnlyCaretVisible="True" IsReadOnly="True"/>
-        <Label Content="Tipo de Listagem:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,-0.462" Margin="-6,24,0,0" FontSize="16" Foreground="#FFC70101" FontWeight="Bold"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="95.686,225,-90,-6" Grid.Row="2" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
+        <Label Content="Tipo de Listagem:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,-0.462" Margin="-2,24,0,0" FontSize="16" Foreground="#FF441508" FontWeight="SemiBold"/>
         <ListBox x:Name="lbListar" HorizontalAlignment="Left" Height="350" Margin="162,23,0,0" VerticalAlignment="Top" Width="481" Grid.RowSpan="3" SelectionChanged="LbListar_SelectionChanged" BorderBrush="White" MouseLeftButtonUp="LbListar_MouseLeftButtonUp" />
 
     </Grid>

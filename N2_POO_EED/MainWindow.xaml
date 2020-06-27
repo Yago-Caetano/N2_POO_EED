@@ -8,10 +8,10 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid Margin="0,0,2,-21">
         <Image HorizontalAlignment="Left" Height="100" Margin="136,102,0,0" VerticalAlignment="Top" Width="100"/>
-        <Image HorizontalAlignment="Left" Height="430" VerticalAlignment="Top" Width="790" Source="Prancheta 2.png" Stretch="Fill"/>
-        <Image HorizontalAlignment="Left" Height="194" Margin="263,199,0,0" VerticalAlignment="Top" Width="265" Source="tittle.png"/>
-        <Image HorizontalAlignment="Left" Height="40" Margin="428,22,0,0" VerticalAlignment="Top" Width="100" Source="create.png" MouseDown="Image_MouseDown"/>
-        <Image HorizontalAlignment="Left" Height="66" Margin="570,22,0,0" VerticalAlignment="Top" Width="182" Source="select.png" MouseDown="Image_MouseDown_1"/>
+        <Image HorizontalAlignment="Left" Height="430" VerticalAlignment="Top" Width="790" Source="Prancheta 1@4x.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="76" Margin="241,181,0,0" VerticalAlignment="Top" Width="324" Source="Titulo.png"/>
+        <Image HorizontalAlignment="Left" Height="40" Margin="428,22,0,0" VerticalAlignment="Top" Width="100" Source="criar.png" MouseDown="Image_MouseDown"/>
+        <Image HorizontalAlignment="Left" Height="40" Margin="570,22,0,0" VerticalAlignment="Top" Width="182" Source="Selecionar.png" MouseDown="Image_MouseDown_1"/>
 
     </Grid>
 </Window>

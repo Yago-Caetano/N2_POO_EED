@@ -8,7 +8,7 @@
         Title="create" Height="450" Width="800">
     <Grid>
         <Label x:Name="label_Copy2" Content="Sexo: " HorizontalAlignment="Left" Margin="245,178,0,0" VerticalAlignment="Top"/>
-        <Image HorizontalAlignment="Left" Height="424" VerticalAlignment="Top" Width="792" Source="Prancheta 2.png" Stretch="Fill" Margin="-4,0,0,-5"/>
+        <Image HorizontalAlignment="Left" Height="424" VerticalAlignment="Top" Width="792" Source="Background.png" Stretch="Fill" Margin="-4,0,0,-5"/>
         <ComboBox x:Name="cb_tipoAnimal" HorizontalAlignment="Left" Margin="272,58,0,0" VerticalAlignment="Top" Width="222" SelectionChanged="ComboBox_SelectionChanged" FontSize="14">
             <ComboBoxItem Content="Baleia"/>
             <ComboBoxItem Content="Cachorro"/>
