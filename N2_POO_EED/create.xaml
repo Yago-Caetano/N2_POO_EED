@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="create" Height="450" Width="800">
     <Grid>
-        <ComboBox x:Name="cb_tipoAnimal" HorizontalAlignment="Left" Margin="291,38,0,0" VerticalAlignment="Top" Width="223" SelectionChanged="ComboBox_SelectionChanged">
+        <Label x:Name="label_Copy2" Content="Sexo: " HorizontalAlignment="Left" Margin="245,178,0,0" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="424" VerticalAlignment="Top" Width="792" Source="Prancheta 2.png" Stretch="Fill" Margin="-4,0,0,-5"/>
+        <ComboBox x:Name="cb_tipoAnimal" HorizontalAlignment="Left" Margin="272,58,0,0" VerticalAlignment="Top" Width="222" SelectionChanged="ComboBox_SelectionChanged" FontSize="14">
             <ComboBoxItem Content="Baleia"/>
             <ComboBoxItem Content="Cachorro"/>
             <ComboBoxItem Content="Cobra"/>
@@ -23,25 +25,25 @@
             <ComboBoxItem Content="Tartaruga"/>
             <ComboBoxItem Content="Tigre"/>
         </ComboBox>
-        <Button x:Name="btn_instanciarTodos" Content="Cadastrar uma unidade de cada" HorizontalAlignment="Left" Margin="603,39,0,0" VerticalAlignment="Top" Width="179" Height="32" Click="Btn_instanciarTodos_Click"/>
-        <Label x:Name="label" Content="Tipo de animal: " HorizontalAlignment="Left" Margin="192,34,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy" Content="Nome do animal: " HorizontalAlignment="Left" Margin="245,113,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label_Copy1" Content="Data de nascimento: " HorizontalAlignment="Left" Margin="245,147,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txt_nome" HorizontalAlignment="Left" Height="23" Margin="384,116,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txt_dataNascimento" HorizontalAlignment="Left" Height="23" Margin="384,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label_Copy2" Content="Sexo: " HorizontalAlignment="Left" Margin="245,178,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cb_sexo" HorizontalAlignment="Left" Margin="384,180,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
+        <Label x:Name="label" Content="Tipo de animal: " HorizontalAlignment="Left" Margin="153,58,0,0" VerticalAlignment="Top" Width="114" FontSize="14"/>
+        <Label x:Name="label_Copy" Content="Nome do animal: " HorizontalAlignment="Left" Margin="147,138,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="label_Copy1" Content="Data de nascimento: " HorizontalAlignment="Left" Margin="147,178,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label x:Name="lbl_corPelos" Content="Cor dos pêlos:  " HorizontalAlignment="Left" Margin="147,281,0,0" VerticalAlignment="Top" IsEnabled="False" FontSize="14"/>
+        <Label x:Name="lbl_corPenas" Content="Cor das penas:  " HorizontalAlignment="Left" Margin="147,311,0,0" VerticalAlignment="Top" IsEnabled="False" FontSize="14"/>
+        <Label x:Name="lbl_quantMamas" Content="Quantidade de mamas:  " HorizontalAlignment="Left" Margin="147,339,0,0" VerticalAlignment="Top" IsEnabled="False" FontSize="14"/>
+        <TextBox x:Name="txt_nome" HorizontalAlignment="Left" Height="24" Margin="313,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txt_dataNascimento" HorizontalAlignment="Left" Height="24" Margin="313,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cb_sexo" HorizontalAlignment="Left" Margin="309,224,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0" FontSize="14">
             <ComboBoxItem Content="Macho"/>
             <ComboBoxItem Content="Fêmea"/>
         </ComboBox>
-        <Label x:Name="lbl_corPelos" Content="Cor dos pêlos:  " HorizontalAlignment="Left" Margin="245,253,0,0" VerticalAlignment="Top" IsEnabled="False"/>
-        <TextBox x:Name="txt_corPelos" HorizontalAlignment="Left" Height="23" Margin="384,257,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-        <Label x:Name="lbl_corPenas" Content="Cor das penas:  " HorizontalAlignment="Left" Margin="245,284,0,0" VerticalAlignment="Top" IsEnabled="False"/>
-        <TextBox x:Name="txt_corPenas" HorizontalAlignment="Left" Height="23" Margin="384,288,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-        <Label x:Name="lbl_quantMamas" Content="Quantidade de mamas:  " HorizontalAlignment="Left" Margin="245,312,0,0" VerticalAlignment="Top" IsEnabled="False"/>
-        <TextBox x:Name="txt_quantMama" HorizontalAlignment="Left" Height="23" Margin="384,316,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-        <Button x:Name="btn_cadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="603,93,0,0" VerticalAlignment="Top" Width="179" Height="30" Click="Btn_cadastrar_Click"/>
-        <Button x:Name="btn_verAnimalCadastrado" Content="Ver animal cadastrado" HorizontalAlignment="Left" Margin="603,143,0,0" VerticalAlignment="Top" Width="179" Height="30" Click="Btn_verAnimalCadastrado_Click"/>
+        <TextBox x:Name="txt_corPelos" HorizontalAlignment="Left" Height="22" Margin="313,281,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="txt_corPenas" HorizontalAlignment="Left" Height="24" Margin="313,311,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TextBox x:Name="txt_quantMama" HorizontalAlignment="Left" Height="24" Margin="313,344,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Button x:Name="btn_instanciarTodos" Content="Cadastrar uma unidade de cada" HorizontalAlignment="Left" Margin="528,172,0,0" VerticalAlignment="Top" Width="224" Height="32" Click="Btn_instanciarTodos_Click" FontSize="14"/>
+        <Button x:Name="btn_cadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="528,219,0,0" VerticalAlignment="Top" Width="224" Height="30" Click="Btn_cadastrar_Click" FontSize="14"/>
+        <Button x:Name="btn_verAnimalCadastrado" Content="Ver animal cadastrado" HorizontalAlignment="Left" Margin="528,260,0,0" VerticalAlignment="Top" Width="224" Height="30" Click="Btn_verAnimalCadastrado_Click" FontSize="14"/>
+        <Label x:Name="label_Copy3" Content="Criar animais" HorizontalAlignment="Left" Margin="318,4,0,0" VerticalAlignment="Top" Width="115" FontSize="16" Background="{x:Null}" Foreground="Red"/>
 
     </Grid>
 </Window>

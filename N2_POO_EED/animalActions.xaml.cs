@@ -78,7 +78,7 @@ namespace N2_POO_EED
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
+            /*OpenFileDialog ofd = new OpenFileDialog();
             ofd.AddExtension = true;
             ofd.DefaultExt = ".";
             ofd.Filter = "Media Files (*.*)|*.*";
@@ -93,7 +93,8 @@ namespace N2_POO_EED
             //dispatcherTimer.Tick += new EventHandler(timer_Tick);
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
             dispatcherTimer.Start();
-
+            */
+            mEVideos.Play();
         }
 
         
@@ -239,6 +240,30 @@ namespace N2_POO_EED
             }
 
             return Path;
+        }
+
+        private void Slider_ValueChanged_1(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            mEVideos.Volume = sldVolume.Value;
+        }
+
+        private void mEVideos_MediaOpened(object sender, RoutedEventArgs e)
+        {
+            if(mEVideos.NaturalDuration.HasTimeSpan)
+            {
+                TimeSpan ts = TimeSpan.FromMilliseconds(mEVideos.NaturalDuration.TimeSpan.TotalMilliseconds);
+                sldVolume.Maximum = ts.TotalMilliseconds;
+            }
+        }
+
+        private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            mEVideos.Pause();
+        }
+
+        private void Image_MouseDown_2(object sender, MouseButtonEventArgs e)
+        {
+            mEVideos.Stop();
         }
     }
 }
