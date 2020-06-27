@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace N2_POO_EED.Animais
 {
-    class Pato : Ave, IOviparo, IVoar,IAquatico
+    class Pato : Ave,IVoar,IAquatico,IOviparo
     {
         private int altitudeMaxima=6400;
         private double velocidadeVoo=52.0;
@@ -64,17 +64,7 @@ namespace N2_POO_EED.Animais
             throw new NotImplementedException();
         }
 
-        public void Botar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Chocar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Ciscar()
+          public override void Ciscar()
         {
             throw new NotImplementedException();
         }
@@ -90,6 +80,16 @@ namespace N2_POO_EED.Animais
         }
 
         public void Voar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Botar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Chocar()
         {
             throw new NotImplementedException();
         }

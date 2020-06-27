@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace N2_POO_EED.Pasta_Animais
 {
-    class Pombo : Ave, IVoar
+    class Pombo : Ave, IVoar,IOviparo
     {
         private int altitudeMaxima = 5000;
         private double velocidadeVoo = 102.0;
@@ -60,6 +60,16 @@ namespace N2_POO_EED.Pasta_Animais
         }
 
         public void Voar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Botar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Chocar()
         {
             throw new NotImplementedException();
         }

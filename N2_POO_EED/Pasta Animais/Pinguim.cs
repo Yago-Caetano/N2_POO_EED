@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace N2_POO_EED.Pasta_Animais
 {
-    class Pinguim : Ave, IAquatico
+    class Pinguim : Ave, IAquatico,IOviparo
     {
         private bool viveTerra = true;
         private bool mergulho = true;
@@ -62,6 +62,16 @@ namespace N2_POO_EED.Pasta_Animais
         }
 
         public override void Movimentar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Botar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Chocar()
         {
             throw new NotImplementedException();
         }
