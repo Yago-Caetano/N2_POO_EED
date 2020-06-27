@@ -14,7 +14,7 @@ namespace N2_POO_EED.Estruturas_de_dados
     {
         NodoLista primeiro = null; // ponteiro para o primeiro elemento da lista    
         NodoLista ultimo = null;
-        int qtde = 0;
+        public int qtde = 0;
         private NodoLista atual = null;
 
         public object Current
@@ -198,6 +198,22 @@ namespace N2_POO_EED.Estruturas_de_dados
             }
             return r.Trim();
         }
+        /// <summary>
+        /// Retorna um string com todos os elementos da lista concatenados
+        /// </summary>
+        /// <returns></returns>
+        public string ListarTeste()
+        {
+            string r = string.Empty;
+            NodoLista aux = primeiro;
+            while (aux != null)
+            {
+                r = r  + aux.Dado.ToString() + "%";
+                aux = aux.Proximo;
+            }
+            return r.Trim();
+        }
+
         /// <summary>
         /// Procura na lista e retorna um nodo baseado no parametro (nome) , caso não eo encontre retorna null
         /// </summary>

@@ -25,6 +25,7 @@ namespace N2_POO_EED
     public partial class animalList : Window
     {
         Lista lista;
+
         public animalList()
         {
             InitializeComponent();
@@ -45,69 +46,127 @@ namespace N2_POO_EED
                 return;
             }
 
+            string[] nomes;
+             
+
             switch (cbListar.SelectedIndex)
             {
                 case 0:
                     {
-                        txtListar.Text = "";
+                        lbListar.Items.Clear();
                         lista = Arvore.GetAllTiposAnimais(typeof(Animal));
-                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+
+                        nomes = lista.ListarTeste().Split('%');
+                       
+                        for(int x = 0; x < lista.qtde; x++)
+                        {
+                            lbListar.Items.Add(nomes[x]);
+                        }
                     }
                     break;
                 case 1:
                     {
-                        txtListar.Text = "";
+                        lbListar.Items.Clear();
                         lista = Arvore.GetAllTiposAnimais(typeof(Mamifero));
-                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+
+                        nomes = lista.ListarTeste().Split('%');
+
+                        for (int x = 0; x < lista.qtde; x++)
+                        {
+                            lbListar.Items.Add(nomes[x]);
+                        }
                     }
                     break;
                 case 2:
                     {
-                        txtListar.Text = "";
+                        lbListar.Items.Clear();
                         lista = Arvore.GetAllTiposAnimais(typeof(IOviparo));
-                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+
+                        nomes = lista.ListarTeste().Split('%');
+
+                        for (int x = 0; x < lista.qtde; x++)
+                        {
+                            lbListar.Items.Add(nomes[x]);
+                        }
                     }
                     break;
                 case 3:
                     {
-                        txtListar.Text = "";
+                        lbListar.Items.Clear();
                         lista = Arvore.GetAllTiposAnimais(typeof(IAquatico));
-                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+
+                        nomes = lista.ListarTeste().Split('%');
+
+                        for (int x = 0; x < lista.qtde; x++)
+                        {
+                            lbListar.Items.Add(nomes[x]);
+                        }
                     }
                     break;
                 case 4:
                     {
-                        txtListar.Text = "";
+                        lbListar.Items.Clear();
                         lista = Arvore.GetAllTiposAnimais(typeof(IVoar));
-                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+
+                        nomes = lista.ListarTeste().Split('%');
+
+                        for (int x = 0; x < lista.qtde; x++)
+                        {
+                            lbListar.Items.Add(nomes[x]);
+                        }
                     }
                     break;
                 case 5:
                     {
-                        txtListar.Text = "";
+
                         lista = Arvore.GetListaPorIdade();
-                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+                        lbListar.Items.Clear();
+
+                        nomes = lista.ListarTeste().Split('%');
+
+                        for (int x = 0; x < lista.qtde; x++)
+                        {
+                            lbListar.Items.Add(nomes[x]);
+                        }
                     }
                     break;
                 case 6:
                     {
-                        txtListar.Text = "";
                         lista = Arvore.GetAllTiposAnimais(typeof(Animal));
-                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+                        lbListar.Items.Clear();
+
+                        nomes = lista.ListarTeste().Split('%');
+
+                        for (int x = 0; x < lista.qtde; x++)
+                        {
+                            lbListar.Items.Add(nomes[x]);
+                        }
                     }
                     break;
                 case 7:
                     {
-                        txtListar.Text = "";
+                        lbListar.Items.Clear();
                         lista = Arvore.GetAllTiposAnimais(typeof(IPredador));
-                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+
+                        nomes = lista.ListarTeste().Split('%');
+
+                        for (int x = 0; x < lista.qtde; x++)
+                        {
+                            lbListar.Items.Add(nomes[x]);
+                        }
                     }
                     break;
                 default:
                     {
-                        txtListar.Text = "";
+                        lbListar.Items.Clear();
                         lista = Arvore.GetAllTiposAnimais(typeof(Animal));
-                        txtListar.Text += lista.Listar() + Environment.NewLine + Environment.NewLine;
+
+                        nomes = lista.ListarTeste().Split('%');
+
+                        for (int x = 0; x < lista.qtde; x++)
+                        {
+                            lbListar.Items.Add(nomes[x]);
+                        }
                     }
                     break;
 
@@ -271,20 +330,23 @@ namespace N2_POO_EED
         }
 
 
-        private void BtnPesquisar_Click(object sender, RoutedEventArgs e)
+
+
+        private void LbListar_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            NodoLista aux = new NodoLista();
             try
             {
-                aux = lista.Find(txtPesquisar.Text);
-                if (aux == null)
-                    MessageBox.Show("O nome não foi encontrado!!!", "Error", MessageBoxButton.OK,MessageBoxImage.Error);
-                else
-                    MessageBox.Show(aux.Dado.Nome);
+                int i = lbListar.SelectedIndex;
+                string nome = lbListar.Items[i].ToString();
+                string[] nomes = nome.Split('\n');
+                nome = nomes[1].Substring(nome.IndexOf(' '));
+                nome = nome.Replace("\r", "").Trim();
+                lbListar.SelectedItem = null;
+                PassarDados.nome = nome;
             }
             catch
             {
-                MessageBox.Show("A lista está vazia!!!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
 
         }

@@ -99,6 +99,7 @@
     <Compile Include="Estruturas de dados\Lista.cs" />
     <Compile Include="Estruturas de dados\NodoArvore.cs" />
     <Compile Include="Estruturas de dados\NodoLista.cs" />
+    <Compile Include="Estruturas de dados\PassarDados.cs" />
     <Compile Include="Interfaces Animais\IAquatico.cs" />
     <Compile Include="Interfaces Animais\IOviparo.cs" />
     <Compile Include="Interfaces Animais\IPredador.cs" />
