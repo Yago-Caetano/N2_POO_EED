@@ -38,7 +38,7 @@
         <TextBox x:Name="txtListar" HorizontalAlignment="Left" Height="29" Margin="386,-24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" Background="White" BorderBrush="White" IsReadOnlyCaretVisible="True" IsReadOnly="True"/>
         <Label Content="Tipo de Listagem:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,-0.462" Margin="-6,24,0,0" FontSize="16" Foreground="#FFC70101" FontWeight="Bold"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="95.686,225,-90,-6" Grid.Row="2" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
-        <ListBox x:Name="lbListar" HorizontalAlignment="Left" Height="350" Margin="162,23,0,0" VerticalAlignment="Top" Width="481" Grid.RowSpan="3" SelectionChanged="LbListar_SelectionChanged" BorderBrush="White" />
+        <ListBox x:Name="lbListar" HorizontalAlignment="Left" Height="350" Margin="162,23,0,0" VerticalAlignment="Top" Width="481" Grid.RowSpan="3" SelectionChanged="LbListar_SelectionChanged" BorderBrush="White" MouseLeftButtonUp="LbListar_MouseLeftButtonUp" />
 
     </Grid>
 </Window>

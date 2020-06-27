@@ -15,6 +15,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MessageBox = System.Windows.MessageBox;
+using N2_POO_EED.Interfaces_Animais;
+using System.Reflection;
+using System.IO;
 
 namespace N2_POO_EED
 {
@@ -23,45 +26,55 @@ namespace N2_POO_EED
     /// </summary>
     public partial class animalActions : Window
     {
-        public animalActions()
+        Lista actionList;
+        MediaElement media;
+        Animal selectedAnimal;
+
+        public animalActions(String nomeAnimal)
         {
             InitializeComponent();
-            if(PassarDados.nome != "")
+            if(nomeAnimal != "")
             {
-                txtNome.Text = PassarDados.nome;
+
             }
-        }
-        Lista list = Arvore.GetListaPorIdade();
 
-        MediaElement media;
-        
+            selectedAnimal = Arvore.Pesquisar(nomeAnimal);
+            lbAnimais.Items.Add(selectedAnimal);
+            actionList = new Lista();
+            OrganizaAcoes();
+            lbTitulo.Content = selectedAnimal.GetType().GetTypeInfo().Name + " - " + selectedAnimal.Nome;
 
-        private void cboxAnimaisCadastrados_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            cboxAnimaisCadastrados.DataContext = list;
-        }
-
-        private void btnNomeAnimal_Click(object sender, RoutedEventArgs e)
-        {
-            NodoLista aux = new NodoLista();
+            foreach (Object o in actionList)
+            {
+                cboxListaAcoes.Items.Add(o);
+            }
             
 
-            try
-            {
-                if (Arvore.PesquisaValor(txtNome, aux))
-                {
-                    //animal encontrado
-                    //aux = list.Find(txtNome.Text);
-                    lbAnimais.Items.Add(aux);
-                }
-                else
-                    MessageBox.Show("O nome não foi encontrado!!!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            catch
-            {
-                MessageBox.Show("Cadastrar um animal primeiro!!!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
         }
+
+
+     
+
+
+        private void OrganizaAcoes()
+        {
+            foreach (MethodInfo metodo in selectedAnimal.GetType().GetMethods())
+            {
+
+                if(!metodo.Name.Contains("get") && !metodo.Name.Contains("set") && !metodo.Name.Contains("Equals")
+                    && !metodo.Name.Contains("ToString") && !metodo.Name.Contains("Get") && !metodo.Name.Contains("Idade"))
+                {
+                    actionList.InserirNoFim(metodo.Name);
+
+                }
+       
+                Console.WriteLine(metodo.Name);
+
+   
+            }
+
+        }
+
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -87,8 +100,145 @@ namespace N2_POO_EED
 
         private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-
         }
 
+        private void CboxListaAcoes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            String Path = GetResourceName();
+            if (Path == null)
+                return;
+
+            Console.WriteLine(Path);
+            mEVideos.Source = new Uri(Path);
+            mEVideos.Play();
+        }
+
+
+        String GetResourceName()
+        {
+            String Path = Directory.GetCurrentDirectory();
+            Path = Path.Substring(0, Path.IndexOf("\\bin"));
+
+            int index = cboxListaAcoes.SelectedIndex;
+            if (index < 0)
+                return null;
+
+            String Action = cboxListaAcoes.Items[index].ToString();
+
+            String AnimalName = "";
+
+            Path += "\\assets";
+
+            //verifica o tipo de animal selecionado
+            switch (selectedAnimal.GetType().GetTypeInfo().Name)
+            {
+                case "Baleia":
+                    AnimalName = "whale";
+                    break;
+
+                case "Cachorro":
+                    AnimalName = "dog";
+                    break;
+
+                case "Cobra":
+                    AnimalName = "snake";
+                    break;
+
+                case "Coruja":
+                    AnimalName = "owl";
+                    break;
+
+                case "Gato":
+                    AnimalName = "cat";
+                    break;
+
+                case "Gaviao":
+                    AnimalName = "hawk";
+                    break;
+
+                case "Leao":
+                    AnimalName = "lion";
+                    break;
+
+                case "Morcego":
+                    AnimalName = "bat";
+                    break;
+
+                case "Ornitorrinco":
+                    AnimalName = "platypus";
+                    break;
+
+                case "Pato":
+                    AnimalName = "duck";
+                    break;
+
+                case "Pinguim":
+                    AnimalName = "penguin";
+                    break;
+
+                case "Pombo":
+                    AnimalName = "pigeon";
+                    break;
+
+                case "Tartatuga":
+                    AnimalName = "turtle";
+
+                    break;
+
+                case "Tigre":
+                    AnimalName = "tiger";
+                    break;
+
+                default:
+                    return null;
+            }
+
+
+            //verifica o tipo de ação desejada
+            switch (Action)
+            {
+                case "Alimentar":
+                    Path += ("\\" + AnimalName + "\\actions\\feed\\video.3gp");
+                    break;
+
+                case "Ataque":
+                    Path += ("\\" + AnimalName + "\\actions\\attack\\video.3gp");
+                    break;
+
+                case "Comunicar":
+                    Path += ("\\" + AnimalName + "\\actions\\communicate\\video.3gp");
+                    break;
+
+                case "Movimentar":
+                    Path += ("\\" + AnimalName + "\\actions\\walk\\video.3gp");
+                    break;
+
+                case "Voar":
+                    Path += ("\\" + AnimalName + "\\actions\\fly\\video.3gp");
+                    break;
+
+                case "Ciscar":
+                    Path += ("\\" + AnimalName + "\\actions\\scratch\\video.3gp");
+                    break;
+
+                case "Amamentar":
+                    Path += ("\\" + AnimalName + "\\actions\\breastfeed\\video.3gp");
+                    break;
+
+                case "Botar":
+                    Path += ("\\" + AnimalName + "\\actions\\lay_egg\\video.3gp");
+                    break;
+
+                case "Chocar":
+                    Path += ("\\" + AnimalName + "\\actions\\hatch_the_egg\\video.3gp");
+                    break;
+
+                default:
+                    return null;
+            }
+
+            return Path;
+        }
     }
 }

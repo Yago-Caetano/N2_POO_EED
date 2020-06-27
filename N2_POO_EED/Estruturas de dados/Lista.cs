@@ -34,7 +34,7 @@ namespace N2_POO_EED.Estruturas_de_dados
         /// <param name="anterior">o nodo que será o anterior ao nodo inserido.
         /// Se o novo nodo for o primeiro, passe null</param>
         /// <param name="valor">o valor a ser inserido</param>
-        private void InserirNaPosicao(NodoLista anterior, Animal valor)
+        private void InserirNaPosicao(NodoLista anterior, Object valor)
         {
             NodoLista novo = new NodoLista();
             novo.Dado = valor;
@@ -72,7 +72,7 @@ namespace N2_POO_EED.Estruturas_de_dados
         /// Insere um valor no início da lista
         /// </summary>
         /// <param name="valor"></param>
-        public void InserirNoInicio(Animal valor)
+        public void InserirNoInicio(Object valor)
         {
             InserirNaPosicao(null, valor);
         }
@@ -82,7 +82,7 @@ namespace N2_POO_EED.Estruturas_de_dados
         /// Insere um valor no final da lista
         /// </summary>
         /// <param name="valor"></param>
-        public void InserirNoFim(Animal valor)
+        public void InserirNoFim(Object valor)
         {
             if (qtde == 0)
                 InserirNoInicio(valor);
@@ -106,7 +106,7 @@ namespace N2_POO_EED.Estruturas_de_dados
         /// </summary>
         /// <param name="valor">valor</param>
         /// <param name="posicao">posicao iniciando do 1</param>
-        public void InserirNaPosicao(Animal valor, int posicao)
+        public void InserirNaPosicao(Object valor, int posicao)
         {
             if (posicao > qtde || posicao < 0)
                 throw new Exception("Não é possível inserir.");
@@ -156,29 +156,29 @@ namespace N2_POO_EED.Estruturas_de_dados
         /// Coloca o animal na lista em posição de acordo com a idade.
         /// </summary>
         /// <param name="animal">animal a ser inserido na lista</param>
-        public void AdicionarEmOrdem(Animal animal)
+        public void AdicionarEmOrdem(Object valor)
         {
             NodoLista aux = primeiro;
             int posicao = 0;
             if (qtde == 0)
-                InserirNoInicio(animal);
+                InserirNoInicio(valor);
             else
             {
                 while (aux != null)
                 {
-                    if (aux.Dado.Idade() > animal.Idade())
+                    if ((aux.Dado as Animal).Idade() > (valor as Animal).Idade())
                     {
                         if (posicao == 0)
-                            InserirNoInicio(animal);
+                            InserirNoInicio(valor);
                         else
-                            InserirNaPosicao(animal, posicao);
+                            InserirNaPosicao(valor, posicao);
 
                         return;
                     }
                     aux = aux.Proximo;
                     posicao++;
                 }
-                InserirNoFim(animal);
+                InserirNoFim(valor);
             }
 
         }
@@ -225,7 +225,7 @@ namespace N2_POO_EED.Estruturas_de_dados
             NodoLista aux = primeiro;
             while (aux != null)
             {
-                if (aux.Dado.Nome.ToUpper() == nome.ToUpper())
+                if (((aux.Dado as Animal).Nome.ToUpper()) == nome.ToUpper())
                     break;
                 else
                     aux = aux.Proximo;

@@ -9,7 +9,7 @@ namespace N2_POO_EED.Estruturas_de_dados
 {
     class NodoLista
     {
-        public Animal Dado { get; set; }
+        public Object Dado { get; set; }
         public NodoLista Proximo { get; set; }
 
         public NodoLista Anterior { get; set; }

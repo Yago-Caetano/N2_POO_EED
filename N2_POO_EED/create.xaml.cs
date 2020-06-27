@@ -420,8 +420,8 @@ namespace N2_POO_EED
         {
             // Passa os parâmetros para essa página citada para que ela possa indentificar a posição desse animal na lista e efetuar suas ações.
 
-            animalActions action = new animalActions();
-            action.ShowDialog();
+            /*animalActions action = new animalActions();
+            action.ShowDialog();*/
         }
     }
 }

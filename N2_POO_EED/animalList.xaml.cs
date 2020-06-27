@@ -17,6 +17,7 @@ using N2_POO_EED.Pasta_Animais;
 using N2_POO_EED.Interfaces_Animais;
 using N2_POO_EED.Animais;
 
+
 namespace N2_POO_EED
 {
     /// <summary>
@@ -137,7 +138,7 @@ namespace N2_POO_EED
 
         private void LbListar_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            try
+            /*try
             {
                 int i = lbListar.SelectedIndex;
                 string nome = lbListar.Items[i].ToString();
@@ -150,8 +151,8 @@ namespace N2_POO_EED
 
                 if (MessageBox.Show($"Tem certeza que quer usar as ações do animal {nome} ?", "Confirmação", MessageBoxButton.YesNo,MessageBoxImage.Question) == MessageBoxResult.Yes)
                 {
-                    PassarDados.nome = nome;
-                    animalActions novaTela = new animalActions();
+                    //PassarDados.nome = nome;
+                    animalActions novaTela = new animalActions(nome);
                     novaTela.Show();
                     this.Close();
                 }
@@ -159,6 +160,41 @@ namespace N2_POO_EED
                 {
                     return;
                 }
+            /*}
+            catch
+            {
+                return;
+            }*/
+        }
+
+        private void LbListar_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+          try
+          {
+            int i = lbListar.SelectedIndex;
+            if(i<0)
+            {
+               return;
+            }
+            string nome = lbListar.Items[i].ToString();
+            string[] nomes = nome.Split('\n');
+            nome = nomes[1].Substring(nome.IndexOf(' '));
+            nome = nome.Replace("\r", "").Trim();
+            lbListar.SelectedItem = null;
+
+
+
+            if (MessageBox.Show($"Tem certeza que quer usar as ações do animal {nome} ?", "Confirmação", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                //PassarDados.nome = nome;
+                animalActions novaTela = new animalActions(nome);
+                novaTela.Show();
+                this.Close();
+            }
+            else
+            {
+                return;
+            }
             }
             catch
             {

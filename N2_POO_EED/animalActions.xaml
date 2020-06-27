@@ -12,9 +12,9 @@
             <ColumnDefinition Width="611*"/>
         </Grid.ColumnDefinitions>
         <Image HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="790" Source="tela listar.png" Stretch="Fill" Grid.ColumnSpan="2"/>
-        <MediaElement x:Name="slider" HorizontalAlignment="Left" Height="133" Margin="178,203,0,0" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2"/>
+        <MediaElement x:Name="mEVideos" HorizontalAlignment="Left" Height="133" Margin="178,203,0,0" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2" LoadedBehavior="Manual"/>
         <Slider HorizontalAlignment="Left" Margin="97,346,0,0" VerticalAlignment="Top" Height="18" Width="65" Grid.Column="1"/>
-        <Label Content="|" HorizontalAlignment="Left" Margin="205,-97,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFBF8847" Height="54" RenderTransformOrigin="0.462,0.588" Width="18" FontSize="36" Grid.Column="1">
+        <Label Content="|" HorizontalAlignment="Left" Margin="202,9,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFBF8847" Height="44" RenderTransformOrigin="0.462,0.588" Width="18" FontSize="36" Grid.Column="1">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -34,15 +34,10 @@
         </Label>
         <Image HorizontalAlignment="Left" Height="23" Margin="166,341,0,0" VerticalAlignment="Top" Width="33" Source="iconSound.jpg" Grid.Column="1"/>
         <Image HorizontalAlignment="Left" Height="23" Margin="178,346,0,0" VerticalAlignment="Top" Width="27" Source="iconPlay.png" RenderTransformOrigin="1.296,0.391" Grid.ColumnSpan="2" MouseDown="Image_MouseDown"/>
-        <ComboBox x:Name="cboxListaAcoes" HorizontalAlignment="Left" Margin="225,117,0,0" VerticalAlignment="Top" Width="199" Grid.Column="1" Height="22"/>
-        <Label Content="Ações disponiveis" HorizontalAlignment="Left" Margin="225,86,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="26"/>
-        <Label Content="Animal Selecionado" HorizontalAlignment="Left" Margin="154,31,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="26"/>
+        <ComboBox x:Name="cboxListaAcoes" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Width="414" Grid.Column="1" Height="22" SelectionChanged="CboxListaAcoes_SelectionChanged"/>
+        <Label Content="Ações disponiveis" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="26"/>
+        <Label x:Name="lbTitulo" Content="Animal Selecionado" HorizontalAlignment="Left" Margin="154,31,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="26"/>
         <ListBox x:Name="lbAnimais" HorizontalAlignment="Left" Height="183" Margin="225,186,0,0" VerticalAlignment="Top" Width="199" Grid.Column="1"/>
         <Label Content="Informações do Animal" HorizontalAlignment="Left" Margin="225,160,0,0" VerticalAlignment="Top" Width="155" Grid.Column="1" Height="26"/>
-        <Label Content="Animais Cadastrados" HorizontalAlignment="Left" Margin="1,86,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="26"/>
-        <ComboBox x:Name="cboxAnimaisCadastrados" HorizontalAlignment="Left" Margin="1,117,0,0" VerticalAlignment="Top" Width="199" Grid.Column="1" Height="22" SelectionChanged="cboxAnimaisCadastrados_SelectionChanged"/>
-        <TextBox x:Name="txtNome" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="1,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnNomeAnimal" Content="Pesquisar" Grid.Column="1" HorizontalAlignment="Left" Margin="125,172,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="btnNomeAnimal_Click"/>
-        <Label Content="Pesquise por nome" HorizontalAlignment="Left" Margin="1,144,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="26"/>
     </Grid>
 </Window>
