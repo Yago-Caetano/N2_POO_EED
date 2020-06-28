@@ -362,53 +362,61 @@ namespace N2_POO_EED
         /// <returns></returns>
         private void Cadastro(Animal tipoAnimal)
         {
-            if (VerificarCamposBasicos())
-                return;
-
-            // Se os campos mais básicos não estiverem vazios, eles serão preenchidos.
-            tipoAnimal.Nome = txt_nome.Text;
-            tipoAnimal.Data_Nascimento = Convert.ToDateTime(txt_dataNascimento.Text);
-
-            if (cb_sexo.SelectedIndex == 0)
-                tipoAnimal.Sexo = 'm';
-            else if (cb_sexo.SelectedIndex == 1)
-                tipoAnimal.Sexo = 'f';
-
-            // Verificação de que tipos de animais estão sendo cadastrados, verificando os seus próprios componentes.
-            if (tipoAnimal is Ave)
+            try
             {
-                // Verifica se o campo está vazio.
-                if (VerificarCampoVazio(txt_corPelos, "cor das penas"))
+                if (VerificarCamposBasicos())
                     return;
 
-                // Se não estava vazio, realiza a inserção de fato.
-                (tipoAnimal as Ave).Cor_penas = txt_corPenas.Text;
-            }
-            if (tipoAnimal is Mamifero)
-            {
-                // Também realiza as verificações de campos vazios, mas da forma mais específica pra o tipo de animal.
-                if (VerificarCampoVazio(txt_corPelos, "cor dos pêlos"))
-                    return;
-                if (VerificarCampoVazio(txt_quantMama, "quantidade de mamas"))
-                    return;
+                // Se os campos mais básicos não estiverem vazios, eles serão preenchidos.
+                tipoAnimal.Nome = txt_nome.Text;
+                tipoAnimal.Data_Nascimento = Convert.ToDateTime(txt_dataNascimento.Text);
 
-                // Se o campo 'quantidade de mamas' não estiver vazio, ainda assim precisará verificar se é um número inteiro válido.
-                int quantMamas;
-                if (!int.TryParse(txt_quantMama.Text, out quantMamas))
+                if (cb_sexo.SelectedIndex == 0)
+                    tipoAnimal.Sexo = 'm';
+                else if (cb_sexo.SelectedIndex == 1)
+                    tipoAnimal.Sexo = 'f';
+
+                // Verificação de que tipos de animais estão sendo cadastrados, verificando os seus próprios componentes.
+                if (tipoAnimal is Ave)
                 {
-                    MessageBox.Show("O campo 'quantidade de mamas' está num formato incorreto. Por favor, escreva um valor inteiro válido.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
-                    return;
+                    // Verifica se o campo está vazio.
+                    if (VerificarCampoVazio(txt_corPelos, "cor das penas"))
+                        return;
+
+                    // Se não estava vazio, realiza a inserção de fato.
+                    (tipoAnimal as Ave).Cor_penas = txt_corPenas.Text;
+                }
+                if (tipoAnimal is Mamifero)
+                {
+                    // Também realiza as verificações de campos vazios, mas da forma mais específica pra o tipo de animal.
+                    if (VerificarCampoVazio(txt_corPelos, "cor dos pêlos"))
+                        return;
+                    if (VerificarCampoVazio(txt_quantMama, "quantidade de mamas"))
+                        return;
+
+                    // Se o campo 'quantidade de mamas' não estiver vazio, ainda assim precisará verificar se é um número inteiro válido.
+                    int quantMamas;
+                    if (!int.TryParse(txt_quantMama.Text, out quantMamas))
+                    {
+                        MessageBox.Show("O campo 'quantidade de mamas' está num formato incorreto. Por favor, escreva um valor inteiro válido.", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+                        return;
+                    }
+
+                    // Caso tenha passado por todas as verificações, pode-se enfim atribuir as propriedades do mamífero.
+                    (tipoAnimal as Mamifero).Cor_pelos = txt_corPelos.Text;
+                    (tipoAnimal as Mamifero).QtMamas = quantMamas;
                 }
 
-                // Caso tenha passado por todas as verificações, pode-se enfim atribuir as propriedades do mamífero.
-                (tipoAnimal as Mamifero).Cor_pelos = txt_corPelos.Text;
-                (tipoAnimal as Mamifero).QtMamas = quantMamas;
+                Arvore.Insere(tipoAnimal); // Realiza, por fim, a inserção.
+
+                MessageBox.Show("Animal cadastrado!", "Cadastro realizado", MessageBoxButton.OK);
+                LimparCampos();
             }
-
-            Arvore.Insere(tipoAnimal); // Realiza, por fim, a inserção.
-
-            MessageBox.Show("Animal cadastrado!", "Cadastro realizado", MessageBoxButton.OK);
-            LimparCampos();
+            catch(Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+           
         }
 
         /// <summary>
