@@ -6,40 +6,34 @@
         xmlns:local="clr-namespace:N2_POO_EED"
         mc:Ignorable="d"
         Title="animalActions" Height="450" Width="800">
-    <Grid Margin="0,0,2,0">
+    <Grid Margin="1,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="179*"/>
             <ColumnDefinition Width="611*"/>
         </Grid.ColumnDefinitions>
-        <Image HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="790" Source="tela listar.png" Stretch="Fill" Grid.ColumnSpan="2"/>
-        <MediaElement x:Name="mEVideos" HorizontalAlignment="Left" Height="133" Margin="178,203,0,0" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="2" LoadedBehavior="Manual" MediaOpened="mEVideos_MediaOpened"/>
-        <Slider x:Name="sldVolume" HorizontalAlignment="Left" Margin="134,346,0,0" VerticalAlignment="Top" Height="18" Width="65" Grid.Column="1" ValueChanged="Slider_ValueChanged_1" Value="1" Maximum="1000"/>
-        <Label Content="|" HorizontalAlignment="Left" Margin="202,9,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFBF8847" Height="44" RenderTransformOrigin="0.462,0.588" Width="18" FontSize="36" Grid.Column="1">
-            <Label.RenderTransform>
+        <Image HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="790" Source="background.png" Stretch="Fill" Grid.ColumnSpan="2"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="-40,397,-32,-78" VerticalAlignment="Top" Width="862" Source="ground.png" Grid.ColumnSpan="2" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="300" Margin="28,87,0,0" VerticalAlignment="Top" Width="357" Source="quadro.png" Stretch="Fill" Grid.Column="1"/>
+        <MediaElement x:Name="mEVideos" HorizontalAlignment="Left" Height="172" Margin="78,166,0,0" VerticalAlignment="Top" Width="242" LoadedBehavior="Manual" MediaOpened="mEVideos_MediaOpened" Grid.Column="1"/>
+        <Slider x:Name="sldVolume" HorizontalAlignment="Left" Margin="252,351,0,0" VerticalAlignment="Top" Height="18" Width="65" Grid.Column="1" ValueChanged="Slider_ValueChanged_1" Value="1" Maximum="1000"/>
+        <Image HorizontalAlignment="Left" Height="28" Margin="228,346,0,0" VerticalAlignment="Top" Width="24" Source="iconSound.jpg" Grid.Column="1" RenderTransformOrigin="0.424,0.565"/>
+        <Image HorizontalAlignment="Left" Height="28" Margin="140,346,0,0" VerticalAlignment="Top" Width="27" Source="iconPlay.png" RenderTransformOrigin="1.296,0.391" MouseDown="Image_MouseDown" Grid.Column="1"/>
+        <ComboBox x:Name="cboxListaAcoes" HorizontalAlignment="Left" Margin="64,127,0,0" VerticalAlignment="Top" Width="285" Grid.Column="1" Height="22" SelectionChanged="CboxListaAcoes_SelectionChanged"/>
+        <Label Content="Ações disponiveis" HorizontalAlignment="Left" Margin="64,96,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="26"/>
+        <Label x:Name="lbTitulo" Content="Animal Selecionado" HorizontalAlignment="Left" Margin="87,8,0,0" VerticalAlignment="Top" Width="271" Grid.Column="1" Height="52" FontSize="24" FontFamily="Century Gothic"/>
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="18" Margin="118,351,0,0" VerticalAlignment="Top" Width="22" Source="IconStop.png" RenderTransformOrigin="1.235,0.611" MouseDown="Image_MouseDown_2">
+            <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-0.025"/>
+                    <RotateTransform Angle="0.155"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </Label.RenderTransform>
-            <Label.LayoutTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleY="10"/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Label.LayoutTransform>
-        </Label>
-        <Image HorizontalAlignment="Left" Height="28" Margin="110,341,0,0" VerticalAlignment="Top" Width="24" Source="iconSound.jpg" Grid.Column="1" RenderTransformOrigin="0.424,0.565"/>
-        <Image HorizontalAlignment="Left" Height="28" Margin="22,341,0,0" VerticalAlignment="Top" Width="27" Source="iconPlay.png" RenderTransformOrigin="1.296,0.391" MouseDown="Image_MouseDown" Grid.Column="1"/>
-        <ComboBox x:Name="cboxListaAcoes" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Width="414" Grid.Column="1" Height="22" SelectionChanged="CboxListaAcoes_SelectionChanged"/>
-        <Label Content="Ações disponiveis" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="26"/>
-        <Label x:Name="lbTitulo" Content="Animal Selecionado" HorizontalAlignment="Left" Margin="154,31,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" Height="26"/>
-        <ListBox x:Name="lbAnimais" HorizontalAlignment="Left" Height="183" Margin="225,186,0,0" VerticalAlignment="Top" Width="199" Grid.Column="1"/>
-        <Label Content="Informações do Animal" HorizontalAlignment="Left" Margin="225,160,0,0" VerticalAlignment="Top" Width="155" Grid.Column="1" Height="26"/>
-        <Image Grid.Column="1" HorizontalAlignment="Left" Height="18" Margin="0,346,0,0" VerticalAlignment="Top" Width="22" Source="IconStop.png" RenderTransformOrigin="1.235,0.611" MouseDown="Image_MouseDown_2"/>
-        <Image Grid.Column="1" HorizontalAlignment="Left" Height="18" Margin="54,346,0,0" VerticalAlignment="Top" Width="18" Source="iconPause.png" RenderTransformOrigin="0.348,-0.278" MouseDown="Image_MouseDown_1"/>
+            </Image.RenderTransform>
+        </Image>
+        <Rectangle Grid.Column="1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="362" Margin="406,30,0,0" VerticalAlignment="Top" Width="205" Opacity="0.3"/>
+        <Image Grid.Column="1" HorizontalAlignment="Left" Height="18" Margin="172,351,0,0" VerticalAlignment="Top" Width="18" Source="iconPause.png" RenderTransformOrigin="0.348,-0.278" MouseDown="Image_MouseDown_1"/>
+        <Label Content="Informações do Animal" HorizontalAlignment="Left" Margin="423,46,0,0" VerticalAlignment="Top" Width="178" Grid.Column="1" Height="30" FontSize="16"/>
+        <ListBox x:Name="lbAnimais" HorizontalAlignment="Left" Height="275" Margin="413,90,0,0" VerticalAlignment="Top" Width="188" Grid.Column="1" Background="{x:Null}" Foreground="Black" BorderBrush="{x:Null}"/>
     </Grid>
 </Window>

@@ -50,5 +50,30 @@ namespace N2_POO_EED
             animalList list = new animalList();
             list.Show();
         }
+
+
+        private void ImSel_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ScaleTransform scaleTransform1 = new ScaleTransform(1,1);
+            imSel.RenderTransform = scaleTransform1;
+        }
+
+        private void Image_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ScaleTransform scaleTransform1 = new ScaleTransform(1.1,1.1);
+            imSel.RenderTransform = scaleTransform1;
+        }
+
+        private void ImCriar_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ScaleTransform scaleTransform1 = new ScaleTransform(1.1, 1.1);
+            imCriar.RenderTransform = scaleTransform1;
+        }
+
+        private void ImCriar_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ScaleTransform scaleTransform1 = new ScaleTransform(1, 1);
+            imCriar.RenderTransform = scaleTransform1;
+        }
     }
 }

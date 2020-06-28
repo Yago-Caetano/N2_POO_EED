@@ -43,7 +43,7 @@ namespace N2_POO_EED
             actionList = new Lista();
             OrganizaAcoes();
             lbTitulo.Content = selectedAnimal.GetType().GetTypeInfo().Name + " - " + selectedAnimal.Nome;
-
+           
             foreach (Object o in actionList)
             {
                 cboxListaAcoes.Items.Add(o);
@@ -264,5 +264,8 @@ namespace N2_POO_EED
         {
             mEVideos.Stop();
         }
+
+
+        
     }
 }

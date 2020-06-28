@@ -20,7 +20,7 @@
 
         <Image HorizontalAlignment="Left" Height="100" Margin="-92,278,-68,-59" Grid.Row="2" VerticalAlignment="Top" Width="952" Grid.ColumnSpan="2" Source="ground.png" Stretch="Fill"/>
 
-        <ComboBox x:Name="cbListar" HorizontalAlignment="Left" Margin="8,53,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CbListar_SelectionChanged" BorderBrush="{x:Null}">
+        <ComboBox x:Name="cbListar" HorizontalAlignment="Left" Margin="7,62,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="CbListar_SelectionChanged" BorderBrush="{x:Null}">
             <ComboBox.Effect>
                 <DropShadowEffect BlurRadius="20" Opacity="0.4"/>
             </ComboBox.Effect>
@@ -39,14 +39,14 @@
             <ComboBoxItem Content="Ordem Alfabética&#xA;" HorizontalAlignment="Left" Width="118" Height="22"/>
             <ComboBoxItem Content="Predadores" HorizontalAlignment="Left" Width="118"/>
         </ComboBox>
-        <Image Margin="135,10,4.314,25" Source="quadro.png" Stretch="Fill" Grid.RowSpan="3">
+        <Image Margin="135,33,4,25" Source="quadro.png" Stretch="Fill" Grid.RowSpan="3">
             <Image.Effect>
                 <DropShadowEffect BlurRadius="20" Opacity="0" RenderingBias="Quality"/>
             </Image.Effect>
         </Image>
-        <TextBox x:Name="txtListar" HorizontalAlignment="Left" Height="29" Margin="386,-24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" Background="White" BorderBrush="White" IsReadOnlyCaretVisible="True" IsReadOnly="True"/>
-        <Label Content="Tipo de Listagem:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,-0.462" Margin="-2,24,0,0" FontSize="16" Foreground="#FF441508" FontWeight="SemiBold"/>
-        <ListBox x:Name="lbListar" HorizontalAlignment="Left" Height="350" Margin="162,23,0,0" VerticalAlignment="Top" Width="481" Grid.RowSpan="3" SelectionChanged="LbListar_SelectionChanged" BorderBrush="White" MouseLeftButtonUp="LbListar_MouseLeftButtonUp" />
+        <Label Content="Tipo de Listagem:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,-0.462" Margin="-3,33,0,0" FontSize="16" Foreground="#FF441508" FontWeight="SemiBold"/>
+        <ListBox x:Name="lbListar" HorizontalAlignment="Left" Height="320" Margin="162,53,0,0" VerticalAlignment="Top" Width="481" Grid.RowSpan="3" SelectionChanged="LbListar_SelectionChanged" BorderBrush="White" MouseLeftButtonUp="LbListar_MouseLeftButtonUp" />
+        <Label x:Name="lbTituloListar" Content="Animais Cadastrados" HorizontalAlignment="Left" Margin="284,-6,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Century Gothic"/>
 
     </Grid>
 </Window>

@@ -126,12 +126,14 @@ namespace N2_POO_EED
         /// </summary>
         public void ListarDados()
         {
-            string[] nomes;
-            nomes = lista.ListarNomes().Split('%');
+            string[] animais;
+            string[] campos;
+            animais = lista.ListarNomes().Split('%');
 
             for (int x = 0; x < lista.qtde; x++)
             {
-                lbListar.Items.Add(nomes[x]);
+                campos = animais[x].Replace("\r","").Split('\n');
+                lbListar.Items.Add(campos[1] + " - " + campos[0] + " - " + campos[2]);
             }
         }
 
@@ -177,8 +179,8 @@ namespace N2_POO_EED
                return;
             }
             string nome = lbListar.Items[i].ToString();
-            string[] nomes = nome.Split('\n');
-            nome = nomes[1].Substring(nome.IndexOf(' '));
+            string[] nomes = nome.Split('-');
+            nome = nomes[0].Substring(nome.IndexOf(' '));
             nome = nome.Replace("\r", "").Trim();
             lbListar.SelectedItem = null;
 
