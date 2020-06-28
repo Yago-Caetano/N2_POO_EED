@@ -201,7 +201,7 @@ namespace N2_POO_EED
                     HabilitarOuDesabilitarComponentes(false, true, false);
                     break;
                 case 12: // Tartaruga
-                    HabilitarOuDesabilitarComponentes(false, true, false);
+                    HabilitarOuDesabilitarComponentes(false, false, false);
                     break;
                 case 13: // Tigre
                     HabilitarOuDesabilitarComponentes(true, false, true);
