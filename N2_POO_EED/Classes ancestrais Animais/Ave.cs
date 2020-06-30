@@ -42,7 +42,7 @@ namespace N2_POO_EED.Classes_ancestrais_Animais
         {
             Cor_penas = _cor;
         }
-        public abstract void Ciscar();
+        public abstract string Ciscar();
 
     }
 }

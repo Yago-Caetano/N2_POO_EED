@@ -8,7 +8,7 @@ namespace N2_POO_EED.Interfaces_Animais
 {
     interface IVoar
     {
-        void Voar();
+        string Voar();
         int AltitudeMaximaMetros { get;}
 
         double VelocidadeVoo { get;} //em km/h

@@ -15,6 +15,31 @@ namespace N2_POO_EED.Pasta_Animais
             return "Tipo: Tartaruga" + Environment.NewLine + base.ToString();
         }
 
+        public override string Movimentar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Comunicar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Alimentar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Botar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Chocar()
+        {
+            throw new NotImplementedException();
+        }
+
         public Tartaruga(string _nome, DateTime _data, char _sexo) : base(_nome, _data, _sexo)
         {
             escamas = true;
@@ -36,29 +61,6 @@ namespace N2_POO_EED.Pasta_Animais
 
         public bool AguaDoce => throw new NotImplementedException();
 
-        public override void Alimentar()
-        {
-            throw new NotImplementedException();
-        }
 
-        public void Botar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Chocar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Comunicar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Movimentar()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

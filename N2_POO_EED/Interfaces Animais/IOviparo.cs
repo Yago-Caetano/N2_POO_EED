@@ -8,9 +8,9 @@ namespace N2_POO_EED.Interfaces_Animais
 {
     interface IOviparo
     {
-        void Botar();
+        string Botar();
 
-        void Chocar(); 
+        string Chocar(); 
 
     }
 }

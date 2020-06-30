@@ -9,7 +9,7 @@ namespace N2_POO_EED.Classes_ancestrais_Animais
 {
     abstract class Mamifero : Animal
     {
-        private int qtMamas;
+        protected int qtMamas;
         protected bool pelos;
         private string cor_pelo;
 
@@ -57,7 +57,7 @@ namespace N2_POO_EED.Classes_ancestrais_Animais
             Cor_pelos = cor;
         }
 
-        public abstract void Amamentar();
+        public abstract string Amamentar();
 
     }
 }

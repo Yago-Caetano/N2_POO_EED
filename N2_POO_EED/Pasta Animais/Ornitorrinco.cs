@@ -22,15 +22,45 @@ namespace N2_POO_EED.Pasta_Animais
                  $"Vive na água doce? Sim" + Environment.NewLine;
         }
 
+        public override string Amamentar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Movimentar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Comunicar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Alimentar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Botar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Chocar()
+        {
+            throw new NotImplementedException();
+        }
+
         public Ornitorrinco(string _nome, DateTime _data, char _sexo, int _qtMamas, string cor)
         {
             Nome = _nome;
             Data_Nascimento = _data;
             this.Sexo = _sexo;
-            QtMamas = _qtMamas;
+            qtMamas = 0; //apesar de ser mamifero o ornitorrinco não tem mamas, mas ele dá leite pela barriga
             Cor_pelos = cor;
-            carnivoro = false;
-            peconhento = false;
+            carnivoro = true;
+            peconhento = true;
             pelos = true;
         }
         public Ornitorrinco()
@@ -54,34 +84,6 @@ namespace N2_POO_EED.Pasta_Animais
             get { return aguaDoce; }
         }
 
-        public override void Alimentar()
-        {
-            throw new NotImplementedException();
-        }
 
-        public override void Amamentar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Botar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Chocar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Comunicar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Movimentar()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

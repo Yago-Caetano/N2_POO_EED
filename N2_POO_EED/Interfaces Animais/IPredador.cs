@@ -8,6 +8,6 @@ namespace N2_POO_EED.Interfaces_Animais
 {
     interface IPredador
     {
-        void Ataque();
+        string Ataque();
     }
 }

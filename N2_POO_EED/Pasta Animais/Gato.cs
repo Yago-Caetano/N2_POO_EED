@@ -15,6 +15,31 @@ namespace N2_POO_EED.Pasta_Animais
             return "Tipo: Gato" + Environment.NewLine + base.ToString();
         }
 
+        public string Ataque()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Amamentar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Movimentar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Comunicar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Alimentar()
+        {
+            throw new NotImplementedException();
+        }
+
         public Gato(string _nome, DateTime _data, char _sexo, int _qtMamas, string cor) : base(_nome, _data, _sexo, _qtMamas, cor)
         {
             carnivoro = true;
@@ -27,29 +52,6 @@ namespace N2_POO_EED.Pasta_Animais
             peconhento = false;
             pelos = true;
         }
-        public override void Alimentar()
-        {
-            throw new NotImplementedException();
-        }
 
-        public override void Amamentar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Ataque()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Comunicar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Movimentar()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

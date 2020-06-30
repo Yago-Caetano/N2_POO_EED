@@ -21,6 +21,36 @@ namespace N2_POO_EED.Pasta_Animais
                  "Vive na água doce? Não" + Environment.NewLine; ;
         }
 
+        public override string Ciscar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Movimentar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Comunicar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Alimentar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Botar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Chocar()
+        {
+            throw new NotImplementedException();
+        }
+
         public Pinguim()
         {
             carnivoro = false;
@@ -46,34 +76,6 @@ namespace N2_POO_EED.Pasta_Animais
             get { return aguaDoce; }
         }
 
-        public override void Alimentar()
-        {
-            throw new NotImplementedException();
-        }
 
-        public override void Ciscar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Comunicar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Movimentar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Botar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Chocar()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

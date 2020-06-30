@@ -17,6 +17,36 @@ namespace N2_POO_EED.Animais
                 + Environment.NewLine + $"Velocidade De Voo: {velocidadeVoo}km/h" + Environment.NewLine;
         }
 
+        public override string Amamentar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Movimentar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Comunicar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Alimentar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Voar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Ataque()
+        {
+            throw new NotImplementedException();
+        }
+
         public Morcego(string _nome, DateTime _data, char _sexo, int _qtMamas, string cor) : base(_nome, _data, _sexo, _qtMamas, cor)
         {
             carnivoro = false;
@@ -42,34 +72,6 @@ namespace N2_POO_EED.Animais
             get { return velocidadeVoo; }
         }
 
-        public override void Alimentar()
-        {
-            throw new NotImplementedException();
-        }
 
-        public override void Amamentar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Ataque()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Comunicar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Movimentar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Voar()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

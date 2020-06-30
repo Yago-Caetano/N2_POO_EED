@@ -84,11 +84,11 @@ namespace N2_POO_EED.Classes_ancestrais_Animais
                 + $"Peçonhento? {(peconhento == true ? "Sim" : "Não")}" + Environment.NewLine;
         }
 
-        public abstract void Movimentar();
+        public abstract string Movimentar();
 
-        public abstract void Comunicar();
+        public abstract string Comunicar();
 
-        public abstract void Alimentar();
+        public abstract string Alimentar();
 
     }
 }

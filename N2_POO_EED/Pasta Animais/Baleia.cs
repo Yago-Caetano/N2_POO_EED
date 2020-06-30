@@ -22,6 +22,27 @@ namespace N2_POO_EED.Pasta_Animais
                 $"Mergulha? {(mergulho == true ? "Sim" : "Não")}" + Environment.NewLine +
                  $"Vive na água doce? {(aguaDoce == true ? "Sim" : "Não")}" + Environment.NewLine;
         }
+
+        public override string Amamentar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Movimentar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Comunicar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Alimentar()
+        {
+            throw new NotImplementedException();
+        }
+
         public Baleia(string _nome, DateTime _data, char _sexo, int _qtMamas) : base(_nome, _data, _sexo, _qtMamas, null)
         {
             carnivoro = true;
@@ -48,24 +69,6 @@ namespace N2_POO_EED.Pasta_Animais
             get { return aguaDoce; }
         }
 
-        public override void Alimentar()
-        {
-            throw new NotImplementedException();
-        }
 
-        public override void Amamentar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Comunicar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Movimentar()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -18,6 +18,41 @@ namespace N2_POO_EED.Pasta_Animais
                 + Environment.NewLine + $"Velocidade De Voo: {velocidadeVoo}km/h" + Environment.NewLine;
         }
 
+        public override string Ciscar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Movimentar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Comunicar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string Alimentar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Voar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Botar()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string Chocar()
+        {
+            throw new NotImplementedException();
+        }
+
         public Pombo()
         {
             carnivoro = false;
@@ -39,39 +74,6 @@ namespace N2_POO_EED.Pasta_Animais
             get { return velocidadeVoo; }
         }
 
-        public override void Alimentar()
-        {
-            throw new NotImplementedException();
-        }
 
-        public override void Ciscar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Comunicar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Movimentar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Voar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Botar()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Chocar()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
