@@ -19,32 +19,38 @@ namespace N2_POO_EED.Animais
 
         public override string Amamentar()
         {
-            throw new NotImplementedException();
+            return "bat\\actions\\breastfeed\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public override string Movimentar()
         {
-            throw new NotImplementedException();
+            return "bat\\actions\\walk\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public override string Comunicar()
         {
-            throw new NotImplementedException();
+            return "bat\\actions\\communicate\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public override string Alimentar()
         {
-            throw new NotImplementedException();
+            return "bat\\actions\\feed\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public string Voar()
         {
-            throw new NotImplementedException();
+            return "bat\\actions\\fly\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public string Ataque()
         {
-            throw new NotImplementedException();
+            return "bat\\actions\\attack\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public Morcego(string _nome, DateTime _data, char _sexo, int _qtMamas, string cor) : base(_nome, _data, _sexo, _qtMamas, cor)

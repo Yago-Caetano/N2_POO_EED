@@ -130,7 +130,7 @@ namespace N2_POO_EED
 
             Path += "\\assets";
 
-            //verifica o tipo de animal selecionado
+           /* //verifica o tipo de animal selecionado
             switch (selectedAnimal.GetType().GetTypeInfo().Name)
             {
                 case "Baleia":
@@ -194,44 +194,44 @@ namespace N2_POO_EED
                     return null;
             }
 
-
+    */
             //verifica o tipo de ação desejada
             switch (Action)
             {
                 case "Alimentar":
-                    Path += ("\\" + AnimalName + "\\actions\\feed\\video.3gp");
+                    Path += ("\\" + AnimalName + "\\" + selectedAnimal.Alimentar());
                     break;
 
                 case "Ataque":
-                    Path += ("\\" + AnimalName + "\\actions\\attack\\video.3gp");
+                    Path += ("\\" + AnimalName + "\\" + (selectedAnimal as IPredador).Ataque());
                     break;
 
                 case "Comunicar":
-                    Path += ("\\" + AnimalName + "\\actions\\communicate\\video.3gp");
+                    Path += ("\\" + AnimalName + "\\" + selectedAnimal.Comunicar());
                     break;
 
                 case "Movimentar":
-                    Path += ("\\" + AnimalName + "\\actions\\walk\\video.3gp");
+                    Path += ("\\" + AnimalName + "\\" + selectedAnimal.Movimentar());
                     break;
 
                 case "Voar":
-                    Path += ("\\" + AnimalName + "\\actions\\fly\\video.3gp");
+                    Path += ("\\" + AnimalName + "\\" + (selectedAnimal as IVoar).Voar());
                     break;
 
                 case "Ciscar":
-                    Path += ("\\" + AnimalName + "\\actions\\scratch\\video.3gp");
+                    Path += ("\\" + AnimalName + "\\" + (selectedAnimal as Ave).Ciscar());
                     break;
 
                 case "Amamentar":
-                    Path += ("\\" + AnimalName + "\\actions\\breastfeed\\video.3gp");
+                    Path += ("\\" + AnimalName + "\\" + (selectedAnimal as Mamifero).Amamentar());
                     break;
 
                 case "Botar":
-                    Path += ("\\" + AnimalName + "\\actions\\lay_egg\\video.3gp");
+                    Path += ("\\" + AnimalName + "\\" + (selectedAnimal as IOviparo).Botar());
                     break;
 
                 case "Chocar":
-                    Path += ("\\" + AnimalName + "\\actions\\hatch_the_egg\\video.3gp");
+                    Path += ("\\" + AnimalName + "\\" + (selectedAnimal as IOviparo).Chocar());
                     break;
 
                 default:

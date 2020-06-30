@@ -18,27 +18,32 @@ namespace N2_POO_EED.Pasta_Animais
 
         public override string Amamentar()
         {
-            throw new NotImplementedException();
+            return "lion\\actions\\breastfeed\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public override string Movimentar()
         {
-            throw new NotImplementedException();
+            return "lion\\actions\\walk\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public override string Comunicar()
         {
-            throw new NotImplementedException();
+            return "lion\\actions\\communicate\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public override string Alimentar()
         {
-            throw new NotImplementedException();
+            return "lion\\actions\\feed\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public string Ataque()
         {
-            throw new NotImplementedException();
+            return "lion\\actions\\attack\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public Leao(string _nome, DateTime _data, char _sexo, int _qtMamas, string cor) : base(_nome, _data, _sexo, _qtMamas, cor)

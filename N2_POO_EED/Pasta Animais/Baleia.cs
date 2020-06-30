@@ -25,22 +25,26 @@ namespace N2_POO_EED.Pasta_Animais
 
         public override string Amamentar()
         {
-            throw new NotImplementedException();
+            return "whale\\actions\\breastfeed\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public override string Movimentar()
         {
-            throw new NotImplementedException();
+            return "whale\\actions\\walk\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public override string Comunicar()
         {
-            throw new NotImplementedException();
+            return "whale\\actions\\comunicate\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public override string Alimentar()
         {
-            throw new NotImplementedException();
+            return "whale\\actions\\feed\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public Baleia(string _nome, DateTime _data, char _sexo, int _qtMamas) : base(_nome, _data, _sexo, _qtMamas, null)

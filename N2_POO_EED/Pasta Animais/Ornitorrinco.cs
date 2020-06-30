@@ -24,32 +24,38 @@ namespace N2_POO_EED.Pasta_Animais
 
         public override string Amamentar()
         {
-            throw new NotImplementedException();
+            return "platypus\\actions\\breastfeed\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public override string Movimentar()
         {
-            throw new NotImplementedException();
+            return "platypus\\actions\\walk\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public override string Comunicar()
         {
-            throw new NotImplementedException();
+            return "platypus\\actions\\communicate\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public override string Alimentar()
         {
-            throw new NotImplementedException();
+            return "platypus\\actions\\feed\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public string Botar()
         {
-            throw new NotImplementedException();
+            return "platypus\\actions\\lay_egg\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public string Chocar()
         {
-            throw new NotImplementedException();
+            return "platypus\\actions\\hatch_the_egg\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public Ornitorrinco(string _nome, DateTime _data, char _sexo, int _qtMamas, string cor)

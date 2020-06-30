@@ -20,37 +20,44 @@ namespace N2_POO_EED.Pasta_Animais
 
         public override string Ciscar()
         {
-            throw new NotImplementedException();
+            return "pigeon\\actions\\scratch\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public override string Movimentar()
         {
-            throw new NotImplementedException();
+            return "pigeon\\actions\\walk\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public override string Comunicar()
         {
-            throw new NotImplementedException();
+            return "pigeon\\actions\\communicate\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public override string Alimentar()
         {
-            throw new NotImplementedException();
+            return "pigeon\\actions\\feed\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public string Voar()
         {
-            throw new NotImplementedException();
+            return "pigeon\\actions\\fly\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public string Botar()
         {
-            throw new NotImplementedException();
+            return "pigeon\\actions\\lay_egg\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public string Chocar()
         {
-            throw new NotImplementedException();
+            return "pigeon\\actions\\hatch_the_egg\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public Pombo()

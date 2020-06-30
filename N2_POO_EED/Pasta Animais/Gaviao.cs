@@ -21,42 +21,50 @@ namespace N2_POO_EED.Pasta_Animais
 
         public override string Ciscar()
         {
-            throw new NotImplementedException();
+            return "hawk\\actions\\scratch\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public override string Movimentar()
         {
-            throw new NotImplementedException();
+            return "hawk\\actions\\walk\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public override string Comunicar()
         {
-            throw new NotImplementedException();
+            return "hawk\\actions\\communicate\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public override string Alimentar()
         {
-            throw new NotImplementedException();
+            return "hawk\\actions\\feed\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public string Voar()
         {
-            throw new NotImplementedException();
+            return "hawk\\actions\\fly\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public string Ataque()
         {
-            throw new NotImplementedException();
+            return "hawk\\actions\\attack\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public string Botar()
         {
-            throw new NotImplementedException();
+            return "hawk\\actions\\lay_egg\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public string Chocar()
         {
-            throw new NotImplementedException();
+            return "hawk\\actions\\hatch_the_egg\\video.3gp";
+            //throw new NotImplementedException();
         }
 
         public Gaviao()
