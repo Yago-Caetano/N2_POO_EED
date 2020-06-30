@@ -77,9 +77,22 @@ namespace N2_POO_EED
         }
         private void Image_MouseDown_2(object sender, MouseButtonEventArgs e)
         {
+         
+
             about telaSObre = new about();
             telaSObre.Show();
         }
 
+        private void Image_MouseEnter_1(object sender, MouseEventArgs e)
+        {
+            ScaleTransform scaleTransform1 = new ScaleTransform(1.1, 1.1);
+            imSobre.RenderTransform = scaleTransform1;
+        }
+
+        private void ImSobre_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ScaleTransform scaleTransform1 = new ScaleTransform(1, 1);
+            imSobre.RenderTransform = scaleTransform1;
+        }
     }
 }

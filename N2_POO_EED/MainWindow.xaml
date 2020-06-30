@@ -12,7 +12,7 @@
         <Image HorizontalAlignment="Left" Height="76" Margin="241,181,0,0" VerticalAlignment="Top" Width="324" Source="Titulo.png"/>
         <Image x:Name="imCriar" HorizontalAlignment="Left" Height="40" Margin="428,22,0,0" VerticalAlignment="Top" Width="100" Source="criar.png" MouseDown="Image_MouseDown" MouseEnter="ImCriar_MouseEnter" MouseLeave="ImCriar_MouseLeave"/>
         <Image x:Name="imSel" HorizontalAlignment="Left" Height="40" Margin="570,22,0,0" VerticalAlignment="Top" Width="182" Source="Selecionar.png" MouseDown="Image_MouseDown_1" MouseEnter="Image_MouseEnter" MouseLeave="ImSel_MouseLeave"/>
-        <Image HorizontalAlignment="Left" Height="72" Margin="108,207,0,0" VerticalAlignment="Top" Width="89" Source="IconStop.png" MouseDown="Image_MouseDown_2" RenderTransformOrigin="0.748,-0.165"/>
+        <Image x:Name="imSobre" HorizontalAlignment="Left" Height="26" Margin="26,382,0,0" VerticalAlignment="Top" Width="46" Source="sobre@4x.png" MouseDown="Image_MouseDown_2" RenderTransformOrigin="0.748,-0.165" Stretch="Fill" MouseEnter="Image_MouseEnter_1" MouseLeave="ImSobre_MouseLeave"/>
 
     </Grid>
 </Window>

@@ -182,5 +182,8 @@
   <ItemGroup>
     <Resource Include="Prancheta 1%404x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sobre%404x.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
