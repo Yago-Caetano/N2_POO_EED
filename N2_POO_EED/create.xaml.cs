@@ -380,7 +380,7 @@ namespace N2_POO_EED
                 if (tipoAnimal is Ave)
                 {
                     // Verifica se o campo está vazio.
-                    if (VerificarCampoVazio(txt_corPelos, "cor das penas"))
+                    if (VerificarCampoVazio(txt_corPenas, "cor das penas"))
                         return;
 
                     // Se não estava vazio, realiza a inserção de fato.
