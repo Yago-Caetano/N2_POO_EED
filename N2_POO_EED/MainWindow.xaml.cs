@@ -75,5 +75,11 @@ namespace N2_POO_EED
             ScaleTransform scaleTransform1 = new ScaleTransform(1, 1);
             imCriar.RenderTransform = scaleTransform1;
         }
+        private void Image_MouseDown_2(object sender, MouseButtonEventArgs e)
+        {
+            about telaSObre = new about();
+            telaSObre.Show();
+        }
+
     }
 }

@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="about" Height="450" Width="800">
     <Grid>
-        
+        <Image HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792" Source="background.png" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="276" Margin="-30,354,-18,-211" VerticalAlignment="Top" Width="840" Source="ground.png"/>
+        <Image HorizontalAlignment="Left" Height="328" Margin="158,68,0,0" VerticalAlignment="Top" Width="574" Source="quadro.png"/>
+        <Label x:Name="lbTituloListar" Content="Desenvolvedores" HorizontalAlignment="Left" Margin="284,24,0,0" VerticalAlignment="Top" FontSize="24" FontFamily="Century Gothic"/>
+        <Label x:Name="label01" Content="Guilherme Aparecido Tavares - 081190035" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,-0.462" Margin="187,144,0,0" FontSize="20" Foreground="#FF441508" FontWeight="SemiBold" MouseLeave="Label_MouseLeave" MouseEnter="label01_MouseEnter_1"/>
+        <Label x:Name="label02" Content="Lucas Santos Costa - 081190015" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,-0.462" Margin="187,186,0,0" FontSize="20" Foreground="#FF441508" FontWeight="SemiBold" MouseLeave="label02_MouseLeave_1" MouseEnter="label02_MouseEnter_1"/>
+        <Label x:Name="label03" Content="Rodrigo Emiliano Oliveira - 081190004" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,-0.462" Margin="187,228,0,0" FontSize="20" Foreground="#FF441508" FontWeight="SemiBold" MouseLeave="label03_MouseLeave_1" MouseEnter="label03_MouseEnter_1"/>
+        <Label x:Name="label04" Content="Roger Kenichi Nomi - 081190026" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,-0.462" Margin="187,275,0,0" FontSize="20" Foreground="#FF441508" FontWeight="SemiBold" MouseLeave="label04_MouseLeave_1" MouseEnter="label04_MouseEnter_1"/>
+        <Label x:Name="label05" Content="Yago Jose Barros Caetano - 081190027" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,-0.462" Margin="188,312,0,0" FontSize="20" Foreground="#FF441508" FontWeight="SemiBold" MouseLeave="label05_MouseLeave" MouseEnter="label05_MouseEnter"/>
+        <Label Content="EC - 3" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.474,-0.462" Margin="343,81,0,0" FontSize="24" Foreground="#FF441508" FontWeight="SemiBold"/>
+
     </Grid>
 </Window>

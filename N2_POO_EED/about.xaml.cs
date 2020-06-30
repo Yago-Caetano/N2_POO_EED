@@ -23,5 +23,75 @@ namespace N2_POO_EED
         {
             InitializeComponent();
         }
+
+
+
+        private void Label_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ScaleTransform scaleTransform1 = new ScaleTransform(1, 1);
+            label01.RenderTransform = scaleTransform1;
+        }
+
+        private void label01_MouseEnter_1(object sender, MouseEventArgs e)
+        {
+            ScaleTransform scaleTransform1 = new ScaleTransform(1.1, 1.1);
+            label01.RenderTransform = scaleTransform1;
+        }
+
+        //=================================================================================
+
+        private void label02_MouseLeave_1(object sender, MouseEventArgs e)
+        {
+            ScaleTransform scaleTransform1 = new ScaleTransform(1, 1);
+            label02.RenderTransform = scaleTransform1;
+        }
+
+        private void label02_MouseEnter_1(object sender, MouseEventArgs e)
+        {
+            ScaleTransform scaleTransform1 = new ScaleTransform(1.1, 1.1);
+            label02.RenderTransform = scaleTransform1;
+        }
+
+        //=================================================================================
+
+        private void label03_MouseLeave_1(object sender, MouseEventArgs e)
+        {
+            ScaleTransform scaleTransform1 = new ScaleTransform(1, 1);
+            label03.RenderTransform = scaleTransform1;
+        }
+
+        private void label03_MouseEnter_1(object sender, MouseEventArgs e)
+        {
+            ScaleTransform scaleTransform1 = new ScaleTransform(1.1, 1.1);
+            label03.RenderTransform = scaleTransform1;
+        }
+
+        //=================================================================================
+
+        private void label04_MouseLeave_1(object sender, MouseEventArgs e)
+        {
+            ScaleTransform scaleTransform1 = new ScaleTransform(1, 1);
+            label04.RenderTransform = scaleTransform1;
+        }
+
+        private void label04_MouseEnter_1(object sender, MouseEventArgs e)
+        {
+            ScaleTransform scaleTransform1 = new ScaleTransform(1.1,1.1);
+            label04.RenderTransform = scaleTransform1;
+        }
+
+        //=================================================================================
+
+        private void label05_MouseLeave(object sender, MouseEventArgs e)
+        {
+            ScaleTransform scaleTransform1 = new ScaleTransform(1, 1);
+            label05.RenderTransform = scaleTransform1;
+        }
+
+        private void label05_MouseEnter(object sender, MouseEventArgs e)
+        {
+            ScaleTransform scaleTransform1 = new ScaleTransform(1.1, 1.1);
+            label05.RenderTransform = scaleTransform1;
+        }
     }
 }
