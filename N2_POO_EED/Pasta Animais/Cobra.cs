@@ -41,7 +41,7 @@ namespace N2_POO_EED.Pasta_Animais
 
         public string Chocar()
         {
-            return "snake\\actions\\hatch_egg\\video.3gp";
+            return "snake\\actions\\hatch_the_egg\\video.3gp";
             //throw new NotImplementedException();
         }
 

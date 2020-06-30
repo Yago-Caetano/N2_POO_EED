@@ -37,7 +37,7 @@ namespace N2_POO_EED.Pasta_Animais
 
         public override string Comunicar()
         {
-            return "whale\\actions\\comunicate\\video.3gp";
+            return "whale\\actions\\communicate\\video.3gp";
             //throw new NotImplementedException();
         }
 
